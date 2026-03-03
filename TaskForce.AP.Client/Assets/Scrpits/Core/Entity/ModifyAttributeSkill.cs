@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace TaskForce.AP.Client.Core.Entity
+{
+    public class ModifyAttributeSkill : Skill
+    {
+        private readonly List<IModifyAttributeEffect> _effects;
+        private readonly IEnumerable<GameData.ModifyAttributeSkill> _effectDatas;
+        private readonly Func<string, int, IModifyAttributeEffect> _createEffect;
+
+        public ModifyAttributeSkill(string skillID, GameData.Skill skillData,
+            TextStore textStore, IEnumerable<GameData.ModifyAttributeSkill> effectDatas,
+            Func<string, int, IModifyAttributeEffect> createEffect)
+            : base(skillID, skillData, textStore)
+        {
+            _effectDatas = effectDatas;
+            _createEffect = createEffect;
+            _effects = new List<IModifyAttributeEffect>();
+        }
+
+        public override void SetLevel(int value)
+        {
+            base.SetLevel(value);
+
+            var owner = GetOwner();
+            if (owner != null)
+            {
+                owner.RemoveModifyAttributeEffects(_effects);
+                RecreateEffects();
+                owner.AddModifyAttributeEffects(_effects);
+            }
+            else
+            {
+                RecreateEffects();
+            }
+        }
+
+        private void RecreateEffects()
+        {
+            _effects.Clear();
+
+            foreach (var entry in _effectDatas)
+            {
+                var effectID = entry.ModifyAttributeEffectID;
+                var newEff = _createEffect.Invoke(effectID, 1);
+                _effects.Add(newEff);
+            }
+        }
+
+        public override void AddToOwner()
+        {
+            var owner = GetOwner();
+            owner.AddModifyAttributeEffects(_effects);
+        }
+    }
+}

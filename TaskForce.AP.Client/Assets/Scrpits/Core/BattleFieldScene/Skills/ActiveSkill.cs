@@ -1,0 +1,53 @@
+﻿using System.Collections.Generic;
+
+namespace TaskForce.AP.Client.Core.BattleFieldScene.Skills
+{
+    public abstract class ActiveSkill : ISkill
+    {
+        private readonly Entity.IActiveSkill _skillEntity;
+        private IUnit _owner;
+
+        public ActiveSkill(Core.Entity.IActiveSkill skillEntity)
+        {
+            _skillEntity = skillEntity;
+        }
+
+        public string GetSkillID()
+        {
+            return _skillEntity.GetSkillID();
+        }
+
+        public void SetOwner(IUnit owner)
+        {
+            _owner = owner;
+        }
+
+        protected IUnit GetOwner()
+        {
+            return _owner;
+        }
+
+        protected Attribute GetAttribute(string attributeID)
+        {
+            return _skillEntity.GetAttribute(attributeID);
+        }
+
+        public virtual bool IsInstantSkill()
+        {
+            return false;
+        }
+
+        public virtual bool HasHealEffect()
+        {
+            return false;
+        }
+
+        public abstract bool IsTargetInRange(IUnit unit, ITarget target);
+        public abstract IEnumerable<ITarget> GetTargetsInRange(IUnit unit);
+
+        public abstract bool IsCompleted();
+        public abstract bool IsCooldownFinished();
+        public abstract void Use(UseSkillArgs args);
+        public abstract void Cancel();
+    }
+}

@@ -1,0 +1,10 @@
+"formulaID","key","value",
+"COEFF_0","a",1,
+"REQUIRE_EXP","a",2,"a*level^2+b*level+c"
+"REQUIRE_EXP","b",2,
+"REQUIRE_EXP","c",2,
+"SOUL_EXP","k",2,"k*level"
+"STAT_0","a",0.2,"base_stat + (level-1) *a"
+"STAT_1","a",0.3,"base_stat + (level-1) *a"
+"STAT_2","a",1,"base_stat + (level-1) *a"
+"SWING_ANGLE_A","a",120,

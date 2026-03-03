@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace TaskForce.AP.Client.Core.BattleFieldScene
+{
+    public class UnitLogicFactroy
+    {
+        private readonly IJoystick _joystick;
+        private readonly ISoulFinder _soulFinder;
+        private readonly Core.View.BattleFieldScene.IWorld _world;
+        private readonly Dictionary<string, Func<IControllableUnit, IUnitLogic>> _creationFunction;
+        private readonly GameDataStore _gameDataStore;
+        private readonly ILoop _loop;
+        private readonly ILogger _logger;
+        private readonly Func<Core.Timer> _createTimer;
+
+        public UnitLogicFactroy(IJoystick joystick, View.BattleFieldScene.IWorld world,
+            Func<Timer> createTimer, ILoop loop, ISoulFinder soulFinder, GameDataStore gameDataStore, ILogger logger)
+        {
+            _joystick = joystick;
+            _world = world;
+            _createTimer = createTimer;
+            _loop = loop;
+            _soulFinder = soulFinder;
+            _gameDataStore = gameDataStore;
+            _logger = logger;
+
+            _creationFunction = new Dictionary<string, Func<IControllableUnit, IUnitLogic>>{
+                { "PLAYER", (unit) =>  new PlayerUnitLogic(_loop, _joystick, _soulFinder, _gameDataStore) },
+                { "NON_PLAYER", (unit) =>  new NonPlayerUnitLogic(_loop, _createTimer.Invoke(), _world) },
+                { "MONK", (unit) =>  new MonkLogic(_loop, new Core.Random()) }
+            };
+        }
+
+        public IUnitLogic Create(IControllableUnit unit, string logicID)
+        {
+            if (_creationFunction.TryGetValue(logicID, out var creationFunction))
+                return creationFunction.Invoke(unit);
+
+            _logger.Warn($"Failed to find logic for logic id ({logicID})");
+            return null;
+        }
+    }
+}

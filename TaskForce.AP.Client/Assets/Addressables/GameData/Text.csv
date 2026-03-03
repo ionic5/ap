@@ -1,0 +1,338 @@
+"key","ko","en","ms","ja","mn","km","id","lo","th","my","tl","vi","tet","hi"
+"RESET_USER_DATA_WARNING","경고 : {0}초 후 유저 데이터를 초기화 합니다. 이는 되돌릴 수 없습니다. 중단하려면 취소 버튼을 누르세요.\n결제 정보는 초기화 되지 않습니다.","Warning: User data will be initialized in {0} seconds. This action cannot be undone. Press the cancel button to stop.\nPayment information will not be reset. ","Amaran: Data pengguna akan diset semula dalam {0} saat. Tindakan ini tidak boleh dibatalkan. Tekan butang batal untuk hentikan. Maklumat pembayaran tidak akan diset semula.","警告：{0}秒後にユーザーデータが初期化されます。この操作は元に戻せません。中止するにはキャンセルボタンを押してください。\n決済情報は初期化されません。","Анхаар: {0} секундийн дараа хэрэглэгчийн мэдээлэл устгагдана. Энэ үйлдлийг буцаах боломжгүй. Зогсоох бол цуцлах товчийг дарна уу.\nТөлбөрийн мэдээлэл устгагдахгүй.","ការព្រមាន៖ ទិន្នន័យអ្នកប្រើនឹងត្រូវបានកំណត់ឡើងវិញក្នុងរយៈពេល {0} វិនាទី។ សកម្មភាពនេះមិនអាចបង្រួបបង្រួមបានទេ។ ចុចប៊ូតុងបោះបង់ដើម្បីបញ្ឈប់។\nព័ត៌មានការទូទាត់នឹងមិនត្រូវបានកំណត់ឡើងវិញទេ។","Peringatan: Data pengguna akan direset dalam {0} detik. Tindakan ini tidak dapat dibatalkan. Tekan tombol batal untuk menghentikan.\nInformasi pembayaran tidak akan direset.","ຄໍາເຕືອນ: ຂໍ້ມູນຜູ້ໃຊ້ຈະຖືກລ້າງໃນ {0} ວິນາທີ. ການກະທໍານີ້ບໍ່ສາມາດຍ້ອນກັບໄດ້. ກົດປຸ່ມຍົກເລີກເພື່ອຢຸດ.\nຂໍ້ມູນການຈ່າຍເງິນຈະບໍ່ຖືກລ້າງ.","คำเตือน: ข้อมูลผู้ใช้จะถูกรีเซ็ตในอีก {0} วินาที การดำเนินการนี้ไม่สามารถย้อนกลับได้ กดปุ่มยกเลิกเพื่อหยุด\nข้อมูลการชำระเงินจะไม่ถูกรีเซ็ต","သတိပေးချက်: {0} စက္ကန့်အတွင်း အသုံးပြုသူဒေတာကို ပြန်လည်စတင်မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်မရနိုင်ပါ။ ရပ်တန့်ရန် ပယ်ဖျက်ခလုတ်ကို နှိပ်ပါ။\nငွေပေးချေမှုအချက်အလက်များကို ပြန်လည်စတင်မည်မဟုတ်ပါ။","Babala: Ang data ng user ay ire-reset sa loob ng {0} segundo. Hindi na ito maibabalik. Pindutin ang kanselahin upang itigil.\nAng impormasyon ng pagbabayad ay hindi ire-reset.","Cảnh báo: Dữ liệu người dùng sẽ được đặt lại sau {0} giây. Hành động này không thể hoàn tác. Nhấn nút hủy để dừng lại.\nThông tin thanh toán sẽ không bị đặt lại.","Avisu: Dadus uza sei halo reset iha {0} segundu. Aksaun ida ne'e la bele muda. Toka botão 'Kansela' atu para.\nInformasaun pagamentu sei la halo reset.","चेतावनी: {0} सेकंड में उपयोगकर्ता डेटा रीसेट किया जाएगा। यह क्रिया पूर्ववत नहीं की जा सकती। रोकने के लिए रद्द करें बटन दबाएं।\nभुगतान जानकारी रीसेट नहीं की जाएगी।"
+"LANGUAGE","언어","Language","Bahasa","言語","Хэл","ភាសា","Bahasa","ພາສາ","ภาษา","ဘာသာစကား","Wika","Ngôn ngữ","Lian","भाषा"
+"RESET","데이터 초기화","Reset","Tetapkan semula data","データ初期化","Мэдээллийг устгах","កំណត់ទិន្នន័យឡើងវិញ","Reset data","ລ້າງຂໍ້ມູນ","รีเซ็ตข้อมูล","ဒေတာ ပြန်လည်စတင်ခြင်း","I-reset ang data","Đặt lại dữ liệu","Reset dadus","डेटा रीसेट करें"
+"SHUTDOWN","게임 종료","Shutdown","Tamatkan permainan","ゲーム終了","Тоглоомыг дуусгах","បញ្ចប់ហ្គេម","Keluar dari permainan","ອອກຈາກເກມ","ปิดเกม","ဂိမ်းပိတ်ရန်","Isara ang laro","Thoát trò chơi","Remata Jogu","खेल बंद करें"
+"CANCEL","취소","Cancel","Batal","キャンセル","Цуцлах","បោះបង់","Batal","ຍົກເລີກ","ยกเลิก","ပယ်ဖျက်ရန်","Kanselahin","Hủy","Kansela","रद्द करें"
+"TOUCH_TO_START","시작하려면 터치하세요.","Touch to start.","Sentuh untuk bermula","開始するにはタッチしてください。","Эхлэхийн тулд товшино уу.","សូមប៉ះដើម្បីចាប់ផ្តើម","Sentuh untuk memulai","ແຕະເພື່ອເລີ່ມ","แตะเพื่อเริ่มต้น","စတင်ရန် တို့ပါ။","Pindutin upang magsimula","Chạm để bắt đầu","Toka atu komesa","शुरू करने के लिए स्पर्श करें"
+"PERSONALIZED_ADS_SETTINGS","맞춤형 광고 설정","Personalized Ad Settings","Tetapan Iklan Diperibadikan","パーソナライズ広告設定","Хувийн тохиргоотой зар сурталчилгааны тохиргоо","ការកំណត់ការផ្សាយពាណិជ្ជកម្មផ្ទាល់ខ្លួន","Pengaturan Iklan yang Dipersonalisasi","ການຕັ້ງຄ່າໂຄສະນາທີ່ປັບແຕ່ງສ່ວນບຸກຄົນ","การตั้งค่าโฆษณาที่ปรับให้เหมาะกับแต่ละบุคคล","ပုဂ္ဂိုလ်ရေးသီးသန့်ပြုလုပ်ထားသော ကြော်ငြာဆက်တင်များ","Mga Setting ng Personalized na Ad","Cài đặt quảng cáo được cá nhân hóa","Anúnsiu Personalizadu nia Konfigurasaun","व्यक्तिगत विज्ञापन सेटिंग"
+"AD_SETTINGS_PRIVACY_NOTICE","당사 앱은 Google AdMob을 통해 광고를 제공합니다. 광고 성능 개선 및 사용자 경험 향상을 위해 광고 ID, 기기 정보 등 일부 데이터를 수집할 수 있습니다.
+
+수집되는 정보는 다음과 같습니다:
+- 광고 ID (예: Android Advertising ID)
+- 기기 정보 (기기 모델, OS 버전 등)
+
+이 정보는 다음 목적을 위해 사용됩니다:
+- 맞춤형 광고 제공 및 광고 성능 분석
+- 사용자 관심사 기반 광고 노출
+
+보관 기간:
+- Google AdMob 정책에 따라 광고 ID 및 관련 정보는 필요한 기간 동안만 저장되며, 이후 자동 삭제 또는 익명화 처리됩니다.
+
+제3자 제공 여부:
+- 수집된 정보는 Google AdMob을 통해 처리되며, 귀하의 동의 없이 당사 또는 Google이 제3자에게 직접 공유하지 않습니다.
+- 단, Google의 광고 네트워크 내에서 익명화된 방식으로 광고 타겟팅에 활용될 수 있습니다.
+
+광고 유형:
+- 맞춤형 광고: 관심사에 기반한 광고 제공
+- 비개인 광고: 일반적인 광고 제공
+
+귀하는 아래 선택을 통해 광고 설정을 결정할 수 있으며, 언제든지 앱 설정에서 변경 가능합니다.","Our app provides advertisements through Google AdMob. To improve ad performance and enhance user experience, we may collect some data, such as advertising ID and device information.
+
+Collected information includes:
+- Advertising ID (e.g., Android Advertising ID)
+- Device information (device model, OS version, etc.)
+
+This information is used for the following purposes:
+- Providing personalized ads and analyzing ad performance
+- Displaying ads based on user interests
+
+Retention Period:
+- According to Google AdMob policies, advertising IDs and related information are stored only for the necessary period and then automatically deleted or anonymized.
+
+Third-Party Sharing:
+- Collected information is processed through Google AdMob and will not be directly shared with third parties by us or Google without your consent.
+- However, it may be used for ad targeting in an anonymized manner within Google's ad network.
+
+Ad Types:
+- Personalized Ads: Providing ads based on interests
+- Non-Personalized Ads: Providing general ads
+
+You can determine your ad settings through the options below and change them at any time in the app settings.","Apl kami menyediakan iklan melalui Google AdMob. Untuk meningkatkan prestasi iklan dan pengalaman pengguna, kami mungkin mengumpul beberapa data, seperti ID pengiklanan dan maklumat peranti.
+
+Maklumat yang dikumpul termasuk:
+- ID Pengiklanan (cth., ID Pengiklanan Android)
+- Maklumat peranti (model peranti, versi OS, dll.)
+
+Maklumat ini digunakan untuk tujuan berikut:
+- Menyediakan iklan diperibadikan dan menganalisis prestasi iklan
+- Memaparkan iklan berdasarkan minat pengguna
+
+Tempoh Pengekalan:
+- Mengikut dasar Google AdMob, ID pengiklanan dan maklumat berkaitan disimpan hanya untuk tempoh yang diperlukan dan kemudian dipadamkan atau dianonimkan secara automatik.
+
+Perkongsian Pihak Ketiga:
+- Maklumat yang dikumpul diproses melalui Google AdMob dan tidak akan dikongsi secara langsung dengan pihak ketiga oleh kami atau Google tanpa persetujuan anda.
+- Walau bagaimanapun, ia mungkin digunakan untuk penargetan iklan secara anonim dalam rangkaian iklan Google.
+
+Jenis Iklan:
+- Iklan Diperibadikan: Menyediakan iklan berdasarkan minat
+- Iklan Bukan Peribadi: Menyediakan iklan umum
+
+Anda boleh menentukan tetapan iklan anda melalui pilihan di bawah dan mengubahnya pada bila-bila masa dalam tetapan aplikasi.","当社のアプリはGoogle AdMobを通じて広告を提供しています。広告パフォーマンスの改善およびユーザー体験向上のため、広告ID、デバイス情報など一部のデータを収集する場合があります。
+
+収集される情報は以下の通りです：
+- 広告ID（例：Android広告ID）
+- デバイス情報（デバイスモデル、OSバージョンなど）
+
+この情報は以下の目的のために使用されます：
+- パーソナライズされた広告の提供および広告パフォーマンスの分析
+- ユーザーの興味に基づいた広告の表示
+
+保管期間：
+- Google AdMobのポリシーに従い、広告IDおよび関連情報は必要な期間のみ保存され、その後自動的に削除または匿名化処理されます。
+
+第三者提供の有無：
+- 収集された情報はGoogle AdMobを通じて処理され、お客様の同意なしに当社またはGoogleが第三者に直接共有することはありません。
+- ただし、Googleの広告ネットワーク内で匿名化された方法で広告ターゲティングに活用される場合があります。
+
+広告タイプ：
+- パーソナライズ広告：興味に基づいた広告の提供
+- 非パーソナル広告：一般的な広告の提供
+
+お客様は以下の選択肢を通じて広告設定を決定でき、いつでもアプリ設定で変更可能です。","Манай апп нь Google AdMob-оор дамжуулан зар сурталчилгааг үзүүлдэг. Зар сурталчилгааны гүйцэтгэлийг сайжруулах, хэрэглэгчийн туршлагыг нэмэгдүүлэхийн тулд бид зар сурталчилгааны ID болон төхөөрөмжийн мэдээлэл зэрэг зарим өгөгдлийг цуглуулж болно.
+
+Цуглуулах мэдээлэлд дараах зүйлс орно:
+- Зар сурталчилгааны ID (жишээ нь: Android Advertising ID)
+- Төхөөрөмжийн мэдээлэл (төхөөрөмжийн загвар, үйлдлийн системийн хувилбар гэх мэт)
+
+Энэ мэдээллийг дараах зорилгоор ашиглана:
+- Хувийн тохиргоотой зар сурталчилгаа үзүүлэх, зар сурталчилгааны гүйцэтгэлийг шинжлэх
+- Хэрэглэгчийн сонирхолд үндэслэн зар сурталчилгаа харуулах
+
+Хадгалах хугацаа:
+- Google AdMob-ын бодлогын дагуу зар сурталчилгааны ID болон холбогдох мэдээллийг зөвхөн шаардлагатай хугацаанд хадгалж, дараа нь автоматаар устгах эсвэл нэргүй болгоно.
+
+Гуравдагч талд хуваалцах эсэх:
+- Цуглуулсан мэдээллийг Google AdMob-оор дамжуулан боловсруулдаг бөгөөд таны зөвшөөрөлгүйгээр бид эсвэл Google нь гуравдагч талд шууд хуваалцахгүй.
+- Гэхдээ Google-ийн зар сурталчилгааны сүлжээнд нэргүй хэлбэрээр зар сурталчилгааны зорилгоор ашиглагдаж болно.
+
+Зар сурталчилгааны төрөл:
+- Хувийн тохиргоотой зар сурталчилгаа: Сонирхолд үндэслэн зар сурталчилгаа үзүүлэх
+- Хувийн бус зар сурталчилгаа: Ерөнхий зар сурталчилгаа үзүүлэх
+
+Та доорх сонголтуудаар дамжуулан зар сурталчилгааны тохиргоогоо тодорхойлох боломжтой бөгөөд апп-ын тохиргооноос хүссэн үедээ өөрчилж болно.","ແອັບຂອງພວກເຮົາໃຫ້ບໍລິການໂຄສະນາຜ່ານ Google AdMob. ເພື່ອປັບປຸງປະສິດທິພາບຂອງໂຄສະນາ ແລະ ເພີ່ມປະສົບການຂອງຜູ້ໃຊ້, ພວກເຮົາອາດຈະເກັບກຳບາງຂໍ້ມູນ, ເຊັ່ນ ID ການໂຄສະນາ ແລະ ຂໍ້ມູນອຸປະກອນ.
+
+ຂໍ້ມູນທີ່ເກັບກຳປະກອບມີ:
+- ID ການໂຄສະນາ (ຕົວຢ່າງ: Android Advertising ID)
+- ຂໍ້ມູນອຸປະກອນ (ຮູບແບບອຸປະກອນ, ເວີຊັນ OS, ແລະອື່ນໆ)
+
+ຂໍ້ມູນນີ້ຖືກນຳໃຊ້ເພື່ອຈຸດປະສົງດັ່ງຕໍ່ໄປນີ້:
+- ການໃຫ້ໂຄສະນາທີ່ປັບແຕ່ງສ່ວນບຸກຄົນ ແລະ ການວິເຄາະປະສິດທິພາບຂອງໂຄສະນາ
+- ການສະແດງໂຄສະນາຕາມຄວາມສົນໃຈຂອງຜູ້ໃຊ້
+
+ໄລຍະເວລາເກັບຮັກສາ:
+- ອີງຕາມນະໂຍບາຍຂອງ Google AdMob, ID ການໂຄສະນາ ແລະ ຂໍ້ມູນທີ່ກ່ຽວຂ້ອງຈະຖືກເກັບຮັກສາໄວ້ໃນໄລຍະເວລາທີ່ຈຳເປັນເທົ່ານັ້ນ ແລະ ຈາກນັ້ນຈະຖືກລຶບ ຫຼື ເຮັດໃຫ້ເປັນນິລະນາມໂດຍອັດຕະໂນມັດ.
+
+ການແບ່ງປັນກັບພາກສ່ວນທີສາມ:
+- ຂໍ້ມູນທີ່ເກັບກຳແມ່ນຖືກປະມວນຜົນຜ່ານ Google AdMob ແລະ ຈະບໍ່ຖືກແບ່ງປັນໂດຍກົງກັບພາກສ່ວນທີສາມໂດຍພວກເຮົາ ຫຼື Google ໂດຍບໍ່ມີການຍິນຍອມຂອງທ່ານ.
+- ຢ່າງໃດກໍຕາມ, ມັນອາດຈະຖືກນຳໃຊ້ສຳລັບການກຳນົດເປົ້າໝາຍໂຄສະນາໃນລັກສະນະນິລະນາມພາຍໃນເຄືອຂ່າຍໂຄສະນາຂອງ Google.
+
+ປະເພດໂຄສະນາ:
+- ໂຄສະນາທີ່ປັບແຕ່ງສ່ວນບຸກຄົນ: ການໃຫ້ໂຄສະນາຕາມຄວາມສົນໃຈ
+- ໂຄສະນາທີ່ບໍ່ເປັນສ່ວນບຸກຄົນ: ການໃຫ້ໂຄສະນາທົ່ວໄປ
+
+ທ່ານສາມາດກຳນົດການຕັ້ງຄ່າໂຄສະນາຂອງທ່ານຜ່ານຕົວເລືອກລຸ່ມນີ້ ແລະ ປ່ຽນແປງໄດ້ທຸກເວລາໃນການຕັ້ງຄ່າແອັບ.","Aplikasi kami menyediakan iklan melalui Google AdMob. Untuk meningkatkan kinerja iklan dan pengalaman pengguna, kami dapat mengumpulkan beberapa data, seperti ID iklan dan informasi perangkat.
+
+Informasi yang dikumpulkan meliputi:
+- ID Iklan (misalnya, Android Advertising ID)
+- Informasi perangkat (model perangkat, versi OS, dll.)
+
+Informasi ini digunakan untuk tujuan berikut:
+- Menyediakan iklan yang dipersonalisasi dan menganalisis kinerja iklan
+- Menampilkan iklan berdasarkan minat pengguna
+
+Periode Retensi:
+- Sesuai dengan kebijakan Google AdMob, ID iklan dan informasi terkait hanya disimpan selama periode yang diperlukan dan kemudian otomatis dihapus atau dianonimkan.
+
+Berbagi dengan Pihak Ketiga:
+- Informasi yang dikumpulkan diproses melalui Google AdMob dan tidak akan dibagikan langsung dengan pihak ketiga oleh kami atau Google tanpa persetujuan Anda.
+- Namun, informasi tersebut dapat digunakan untuk penargetan iklan secara anonim dalam jaringan iklan Google.
+
+Jenis Iklan:
+- Iklan yang Dipersonalisasi: Menyediakan iklan berdasarkan minat
+- Iklan Non-Pribadi: Menyediakan iklan umum
+
+Anda dapat menentukan pengaturan iklan Anda melalui opsi di bawah ini dan mengubahnya kapan saja di pengaturan aplikasi.","ແອັບຂອງພວກເຮົາໃຫ້ບໍລິການໂຄສະນາຜ່ານ Google AdMob. ເພື່ອປັບປຸງປະສິດທິພາບຂອງໂຄສະນາ ແລະ ເພີ່ມປະສົບການຂອງຜູ້ໃຊ້, ພວກເຮົາອາດຈະເກັບກຳບາງຂໍ້ມູນ, ເຊັ່ນ ID ການໂຄສະນາ ແລະ ຂໍ້ມູນອຸປະກອນ.
+
+ຂໍ້ມູນທີ່ເກັບກຳປະກອບມີ:
+- ID ການໂຄສະນາ (ຕົວຢ່າງ: Android Advertising ID)
+- ຂໍ້ມູນອຸປະກອນ (ຮູບແບບອຸປະກອນ, ເວີຊັນ OS, ແລະອື່ນໆ)
+
+ຂໍ້ມູນນີ້ຖືກນຳໃຊ້ເພື່ອຈຸດປະສົງດັ່ງຕໍ່ໄປນີ້:
+- ການໃຫ້ໂຄສະນາທີ່ປັບແຕ່ງສ່ວນບຸກຄົນ ແລະ ການວິເຄາະປະສິດທິພາບຂອງໂຄສະນາ
+- ການສະແດງໂຄສະນາຕາມຄວາມສົນໃຈຂອງຜູ້ໃຊ້
+
+ໄລຍະເວລາເກັບຮັກສາ:
+- ອີງຕາມນະໂຍບາຍຂອງ Google AdMob, ID ການໂຄສະນາ ແລະ ຂໍ້ມູນທີ່ກ່ຽວຂ້ອງຈະຖືກເກັບຮັກສາໄວ້ໃນໄລຍະເວລາທີ່ຈຳເປັນເທົ່ານັ້ນ ແລະ ຈາກນັ້ນຈະຖືກລຶບ ຫຼື ເຮັດໃຫ້ເປັນນິລະນາມໂດຍອັດຕະໂນມັດ.
+
+ການແບ່ງປັນກັບພາກສ່ວນທີສາມ:
+- ຂໍ້ມູນທີ່ເກັບກຳແມ່ນຖືກປະມວນຜົນຜ່ານ Google AdMob ແລະ ຈະບໍ່ຖືກແບ່ງປັນໂດຍກົງກັບພາກສ່ວນທີສາມໂດຍພວກເຮົາ ຫຼື Google ໂດຍບໍ່ມີການຍິນຍອມຂອງທ່ານ.
+- ຢ່າງໃດກໍຕາມ, ມັນອາດຈະຖືກນຳໃຊ້ສຳລັບການກຳນົດເປົ້າໝາຍໂຄສະນາໃນລັກສະນະນິລະນາມພາຍໃນເຄືອຂ່າຍໂຄສະນາຂອງ Google.
+
+ປະເພດໂຄສະນາ:
+- ໂຄສະນາທີ່ປັບແຕ່ງສ່ວນບຸກຄົນ: ການໃຫ້ໂຄສະນາຕາມຄວາມສົນໃຈ
+- ໂຄສະນາທີ່ບໍ່ເປັນສ່ວນບຸກຄົນ: ການໃຫ້ໂຄສະນາທົ່ວໄປ
+
+ທ່ານສາມາດກຳນົດການຕັ້ງຄ່າໂຄສະນາຂອງທ່ານຜ່ານຕົວເລືອກລຸ່ມນີ້ ແລະ ປ່ຽນແປງໄດ້ທຸກເວລາໃນການຕັ້ງຄ່າແອັບ.","แอปของเราให้บริการโฆษณาผ่าน Google AdMob เพื่อปรับปรุงประสิทธิภาพโฆษณาและยกระดับประสบการณ์ของผู้ใช้ เราอาจรวบรวมข้อมูลบางอย่าง เช่น รหัสโฆษณาและข้อมูลอุปกรณ์
+
+ข้อมูลที่รวบรวมได้แก่:
+- รหัสโฆษณา (เช่น Android Advertising ID)
+- ข้อมูลอุปกรณ์ (รุ่นอุปกรณ์, เวอร์ชัน OS, เป็นต้น)
+
+ข้อมูลนี้ใช้เพื่อวัตถุประสงค์ดังต่อไปนี้:
+- การนำเสนอโฆษณาที่ปรับให้เหมาะกับบุคคลและวิเคราะห์ประสิทธิภาพโฆษณา
+- การแสดงโฆษณาตามความสนใจของผู้ใช้
+
+ระยะเวลาการเก็บรักษา:
+- ตามนโยบายของ Google AdMob รหัสโฆษณาและข้อมูลที่เกี่ยวข้องจะถูกจัดเก็บไว้เฉพาะในช่วงเวลาที่จำเป็นเท่านั้น และจะถูกลบหรือทำให้เป็นนิรนามโดยอัตโนมัติหลังจากนั้น
+
+การแบ่งปันกับบุคคลที่สาม:
+- ข้อมูลที่รวบรวมจะถูกประมวลผลผ่าน Google AdMob และเราหรือ Google จะไม่แบ่งปันโดยตรงกับบุคคลที่สามโดยไม่ได้รับความยินยอมจากคุณ
+- อย่างไรก็ตาม อาจมีการนำไปใช้สำหรับการกำหนดเป้าหมายโฆษณาในลักษณะที่ไม่ระบุตัวตนภายในเครือข่ายโฆษณาของ Google
+
+ประเภทโฆษณา:
+- โฆษณาที่ปรับให้เหมาะกับบุคคล: การนำเสนอโฆษณาตามความสนใจ
+- โฆษณาที่ไม่ใช่ส่วนบุคคล: การนำเสนอโฆษณาทั่วไป
+
+คุณสามารถกำหนดการตั้งค่าโฆษณาของคุณผ่านตัวเลือกด้านล่างนี้ และเปลี่ยนแปลงได้ตลอดเวลาในการตั้งค่าแอป","ကျွန်ုပ်တို့၏အက်ပ်သည် Google AdMob မှတစ်ဆင့် ကြော်ငြာများကို ပြသပေးပါသည်။ ကြော်ငြာစွမ်းဆောင်ရည်ကို မြှင့်တင်ရန်နှင့် သုံးစွဲသူအတွေ့အကြုံကို တိုးတက်စေရန်အတွက် ကျွန်ုပ်တို့သည် ကြော်ငြာ ID နှင့် စက်ပစ္စည်းအချက်အလက်ကဲ့သို့သော ဒေတာအချို့ကို စုဆောင်းနိုင်ပါသည်။
+
+စုဆောင်းထားသော အချက်အလက်များတွင် အောက်ပါတို့ ပါဝင်သည်-
+- ကြော်ငြာ ID (ဥပမာ- Android Advertising ID)
+- စက်ပစ္စည်းအချက်အလက် (စက်ပစ္စည်းမော်ဒယ်၊ OS ဗားရှင်း စသည်တို့)
+
+ဤအချက်အလက်များကို အောက်ပါရည်ရွယ်ချက်များအတွက် အသုံးပြုသည်-
+- ပုဂ္ဂိုလ်ရေးသီးသန့်ပြုလုပ်ထားသော ကြော်ငြာများ ပေးအပ်ခြင်းနှင့် ကြော်ငြာစွမ်းဆောင်ရည်ကို ခွဲခြမ်းစိတ်ဖြာခြင်း
+- သုံးစွဲသူစိတ်ဝင်စားမှုအပေါ် အခြေခံ၍ ကြော်ငြာများကို ပြသခြင်း
+
+ထိန်းသိမ်းထားမည့်ကာလ-
+- Google AdMob မူဝါဒများအရ ကြော်ငြာ ID နှင့် ဆက်စပ်အချက်အလက်များကို လိုအပ်သောကာလအတွက်သာ သိမ်းဆည်းထားမည်ဖြစ်ပြီး၊ ထို့နောက် အလိုအလျောက် ဖျက်ပစ်ခြင်း သို့မဟုတ် အမည်မသိပြုလုပ်ခြင်း ပြုလုပ်ပါမည်။
+
+ပြင်ပအဖွဲ့အစည်းသို့ မျှဝေခြင်း ရှိ၊မရှိ-
+- စုဆောင်းထားသော အချက်အလက်များကို Google AdMob မှတစ်ဆင့် လုပ်ဆောင်မည်ဖြစ်ပြီး၊ သင်၏ခွင့်ပြုချက်မရှိဘဲ ကျွန်ုပ်တို့ သို့မဟုတ် Google မှ ပြင်ပအဖွဲ့အစည်းများသို့ တိုက်ရိုက်မျှဝေမည်မဟုတ်ပါ။
+- သို့သော် Google ၏ ကြော်ငြာကွန်ရက်အတွင်း အမည်မသိဖြင့် ကြော်ငြာပစ်မှတ်ထားခြင်းအတွက် အသုံးပြုနိုင်ပါသည်။
+
+ကြော်ငြာအမျိုးအစားများ-
+- ပုဂ္ဂိုလ်ရေးသီးသန့်ပြုလုပ်ထားသော ကြော်ငြာများ- စိတ်ဝင်စားမှုအပေါ် အခြေခံ၍ ကြော်ငြာများ ပေးအပ်ခြင်း
+- ပုဂ္ဂိုလ်ရေးသီးသန့်မပြုလုပ်ထားသော ကြော်ငြာများ- အထွေထွေကြော်ငြာများ ပေးအပ်ခြင်း
+
+အောက်ပါရွေးချယ်မှုများမှတစ်ဆင့် သင်၏ကြော်ငြာဆက်တင်များကို သင်ဆုံးဖြတ်နိုင်ပြီး အက်ပ်ဆက်တင်များတွင် အချိန်မရွေး ပြောင်းလဲနိုင်ပါသည်။","Ang aming app ay nagbibigay ng mga advertisement sa pamamagitan ng Google AdMob. Upang mapabuti ang performance ng ad at mapahusay ang karanasan ng user, maaari kaming mangolekta ng ilang data, tulad ng advertising ID at impormasyon ng device.
+
+Kasama sa kinokolektang impormasyon ang:
+- Advertising ID (hal., Android Advertising ID)
+- Impormasyon ng device (modelo ng device, bersyon ng OS, atbp.)
+
+Ginagamit ang impormasyong ito para sa mga sumusunod na layunin:
+- Pagbibigay ng personalized na ad at pagsusuri ng performance ng ad
+- Pagpapakita ng mga ad batay sa interes ng user
+
+Panahon ng Pagpapanatili:
+- Ayon sa mga patakaran ng Google AdMob, ang mga advertising ID at kaugnay na impormasyon ay iniimbak lamang para sa kinakailangang panahon at pagkatapos ay awtomatikong binubura o ginagawang anonymous.
+
+Pagbabahagi sa Ikatlong Partido:
+- Ang nakolektang impormasyon ay pinoproseso sa pamamagitan ng Google AdMob at hindi direktang ibabahagi sa mga ikatlong partido ng kami o ng Google nang walang pahintulot mo.
+- Gayunpaman, maaari itong gamitin para sa pag-target ng ad sa isang anonymous na paraan sa loob ng ad network ng Google.
+
+Mga Uri ng Ad:
+- Personalized na Ad: Nagbibigay ng mga ad batay sa mga interes
+- Non-Personalized na Ad: Nagbibigay ng pangkalahatang ad
+
+Maaari mong tukuyin ang iyong mga setting ng ad sa pamamagitan ng mga opsyon sa ibaba at baguhin ang mga ito anumang oras sa mga setting ng app.","Ứng dụng của chúng tôi cung cấp quảng cáo thông qua Google AdMob. Để cải thiện hiệu suất quảng cáo và nâng cao trải nghiệm người dùng, chúng tôi có thể thu thập một số dữ liệu, chẳng hạn như ID quảng cáo và thông tin thiết bị.
+
+Thông tin được thu thập bao gồm:
+- ID quảng cáo (ví dụ: ID quảng cáo Android)
+- Thông tin thiết bị (kiểu thiết bị, phiên bản hệ điều hành, v.v.)
+
+Thông tin này được sử dụng cho các mục đích sau:
+- Cung cấp quảng cáo được cá nhân hóa và phân tích hiệu suất quảng cáo
+- Hiển thị quảng cáo dựa trên sở thích của người dùng
+
+Thời gian lưu giữ:
+- Theo chính sách của Google AdMob, ID quảng cáo và thông tin liên quan chỉ được lưu trữ trong khoảng thời gian cần thiết và sau đó sẽ tự động bị xóa hoặc ẩn danh.
+
+Chia sẻ với bên thứ ba:
+- Thông tin được thu thập được xử lý thông qua Google AdMob và sẽ không được chúng tôi hoặc Google chia sẻ trực tiếp với bên thứ ba mà không có sự đồng ý của bạn.
+- Tuy nhiên, thông tin này có thể được sử dụng để nhắm mục tiêu quảng cáo một cách ẩn danh trong mạng lưới quảng cáo của Google.
+
+Loại quảng cáo:
+- Quảng cáo được cá nhân hóa: Cung cấp quảng cáo dựa trên sở thích
+- Quảng cáo không cá nhân hóa: Cung cấp quảng cáo chung
+
+Bạn có thể xác định cài đặt quảng cáo của mình thông qua các tùy chọn bên dưới và thay đổi chúng bất cứ lúc nào trong cài đặt ứng dụng.","Ami-nia app ne'e fó anúnsiu liuhosi Google AdMob. Atu hadi'a rendimentu anúnsiu no hadi'a esperiénsia utilizadór, ami bele halibur dadus balun, hanesan ID anúnsiu no informasaun kona-ba dispositivu.
+
+Informasaun ne'ebé halibur mak tuir mai ne'e:
+- ID Anúnsiu (ezemplu: Android Advertising ID)
+- Informasaun dispositivu (modelo dispositivu, versaun OS, no seluk-seluk tan)
+
+Informasaun ne'e uza ba objetivu sira tuir mai ne'e:
+- Fó anúnsiu personalizadu no análize rendimentu anúnsiu
+- Hatudu anúnsiu bazeia ba interese utilizadór
+
+Períodu Retensaun:
+- Tuir polítika Google AdMob, ID anúnsiu no informasaun relasiona sira ne'e rai de'it ba períodu ne'ebé presiza no depois sei hamoos ka halo anónimu automáticamente.
+
+Partilha ho Terseiru:
+- Informasaun ne'ebé halibur prosesa liuhosi Google AdMob no ami ka Google labele partilha diretamente ho terseiru sira la ho Ita-nia konkordánsia.
+- Maibé, ida ne'e bele uza ba anúnsiu target ba dalan anónimu iha rede anúnsiu Google nian.
+
+Tipu Anúnsiu:
+- Anúnsiu Personalizadu: Fó anúnsiu bazeia ba interese
+- Anúnsiu La Personalizadu: Fó anúnsiu jerál
+
+Ita bele deside Ita-nia anúnsiu konfigurasaun liuhosi opsaun sira tuir mai ne'e no muda ida ne'e kualker tempu iha app konfigurasaun.","हमारा ऐप Google AdMob के माध्यम से विज्ञापन प्रदान करता है। विज्ञापन के प्रदर्शन को बेहतर बनाने और उपयोगकर्ता अनुभव को बढ़ाने के लिए, हम कुछ डेटा एकत्र कर सकते हैं, जैसे विज्ञापन आईडी और डिवाइस जानकारी।
+
+एकत्रित जानकारी में शामिल हैं:
+- विज्ञापन आईडी (उदा. एंड्रॉइड विज्ञापन आईडी)
+- डिवाइस जानकारी (डिवाइस मॉडल, ओएस संस्करण, आदि)
+
+इस जानकारी का उपयोग निम्नलिखित उद्देश्यों के लिए किया जाता है:
+- व्यक्तिगत विज्ञापन प्रदान करना और विज्ञापन प्रदर्शन का विश्लेषण करना
+- उपयोगकर्ता की रुचियों के आधार पर विज्ञापन प्रदर्शित करना
+
+प्रतिधारण अवधि:
+- Google AdMob नीतियों के अनुसार, विज्ञापन आईडी और संबंधित जानकारी केवल आवश्यक अवधि के लिए संग्रहीत की जाती है और उसके बाद स्वचालित रूप से हटा दी जाती है या गुमनाम कर दी जाती है।
+
+तीसरे पक्ष के साथ साझाकरण:
+- एकत्रित जानकारी को Google AdMob के माध्यम से संसाधित किया जाता है, और आपकी सहमति के बिना इसे हमारे या Google द्वारा तीसरे पक्ष के साथ सीधे साझा नहीं किया जाएगा।
+- हालांकि, इसे Google के विज्ञापन नेटवर्क के भीतर गुमनाम तरीके से विज्ञापन लक्ष्यीकरण के लिए उपयोग किया जा सकता है।
+
+विज्ञापन के प्रकार:
+- व्यक्तिगत विज्ञापन: रुचियों के आधार पर विज्ञापन प्रदान करना
+- गैर-व्यक्तिगत विज्ञापन: सामान्य विज्ञापन प्रदान करना
+
+आप नीचे दिए गए विकल्पों के माध्यम से अपनी विज्ञापन सेटिंग्स निर्धारित कर सकते हैं, और ऐप सेटिंग्स में उन्हें किसी भी समय बदल सकते हैं।"
+"AD_PERSONALIZATION_CONSENT","위 내용을 모두 확인하고 맞춤형 광고 수신에 동의합니다.","I have checked all of the above and agree to personalized advertising.","Saya telah menyemak semua perkara di atas dan bersetuju dengan pengiklanan diperibadikan.","上記すべてを確認し、パーソナライズ広告の受信に同意します。","Дээрх бүгдийг шалгаж, хувийн тохиргоотой зар сурталчилгааг зөвшөөрч байна.","ខ្ញុំបានពិនិត្យមើលអ្វីៗទាំងអស់ខាងលើ ហើយយល់ព្រមចំពោះការផ្សាយពាណិជ្ជកម្មផ្ទាល់ខ្លួន។","Saya telah memeriksa semua hal di atas dan setuju untuk menerima iklan yang dipersonalisasi.","ຂ້າພະເຈົ້າໄດ້ກວດເບິ່ງທຸກສິ່ງຂ້າງເທິງ ແລະ ຍິນຍອມຕໍ່ການຮັບໂຄສະນາທີ່ປັບແຕ່ງສ່ວນບຸກຄົນ.","ฉันได้ตรวจสอบทั้งหมดข้างต้นและยอมรับโฆษณาที่ปรับให้เหมาะกับแต่ละบุคคล","ကျွန်ုပ်သည် အထက်ဖော်ပြပါအရာအားလုံးကို စစ်ဆေးပြီးဖြစ်ပြီး၊ ပုဂ္ဂိုလ်ရေးသီးသန့်ပြုလုပ်ထားသော ကြော်ငြာများကို သဘောတူပါသည်။","Nasuri ko na ang lahat ng nasa itaas at sumasang-ayon ako sa mga personalized na advertisement.","Tôi đã kiểm tra tất cả những điều trên và đồng ý nhận quảng cáo được cá nhân hóa.","Ha'u verifika ona hotu-hotu iha leten no konkorda atu simu anúnsiu personalizadu.","मैंने उपरोक्त सभी की जाँच कर ली है और व्यक्तिगत विज्ञापन के लिए सहमत हूँ।"
+"OK","확인","OK","Sahkan","確認","Баталгаажуулах","បញ្ជាក់","Konfirmasi","ຢືນຢັນ","ยืนยัน","အတည်ပြုရန်","Kumpirmahin","Xác nhận","Konfirma","पुष्टि करें"
+"DODGE","피함","Dodged",,,,,,,,,,,,
+"CONFIRM_LANGUAGE_CHANGE","언어를 변경하면 게임을 재시작합니다. ","Changing the language will restart the game.","Menukar bahasa akan memulakan semula permainan.","言語を変更するとゲームが再起動します。","Хэлийг өөрчилбөл тоглоом дахин эхлэнэ."," ប្ដូរភាសានឹងធ្វើឲ្យហ្គេមចាប់ផ្តើមឡើងវិញ។","Mengganti bahasa akan memulai ulang permainan.","ເມື່ອປ່ຽນພາສາ ເກມຈະເລີ່ມໃໝ່.","เมื่อเปลี่ยนภาษา เกมจะเริ่มใหม่.","ဘာသာစကားကိုပြောင်းလဲမည်ဆိုပါက ဂိမ်းကိုပြန်စတင်မည်။","Kapag binago ang wika, ire-restart ang laro.","Thay đổi ngôn ngữ sẽ khởi động lại trò chơi.","Se muda lian, jogu sei reinisia.","भाषा बदलने पर खेल पुनः आरंभ होगा"
+"CONTINUE","계속하기","Continue","Teruskan","続ける","Үргэлжлүүлэх","បន្ត","Lanjutkan","ສືບຕໍ່","ดำเนินการต่อ","ဆက်လက်လုပ်ဆောင်ပါ","Magpatuloy","Tiếp tục","Kontinua","जारी रखें"
+"VICTORY","적을 처치했습니다!","Victory! You defeated the enemy!","Menang! Anda mengalahkan musuh!","勝利！ 敵を倒しました！","Ялалт! Дайсныг ялав!","ជ័យជម្នះ! អ្នកបានកម្ចាត់សត្រូវ!","Kemenangan! Anda mengalahkan musuh!","ໄຊຊະນະ! ທ່ານໄດ້ທຳລາຍສັດຕູ!","ชัยชนะ! คุณได้กำจัดศัตรูแล้ว!","အနိုင်ရခြင်း! ရန်သူကို အနိုင်ယူလိုက်သည်!","Tagumpay! Natalo mo ang kalaban!","Chiến thắng! Bạn đã đánh bại kẻ thù!","Vitória! Man manan inimigu!","विजय! आपने दुश्मन को हरा दिया!"
+"NEW_RECORD","신 기록","New Record","Rekod Baru","新記録","Шинэ амжилт","កំណត់ត្រាថ្មី","Rekor Baru","ສະຖິຕິໃໝ່","สถิติใหม่","စံချိန်သစ်","Bagong Rekord","Kỷ lục mới","Rekór Foun","नया रिकॉर्ड"
+"BEST_RECORD","최고 기록","Best Record","Rekod Terbaik","ベスト記録","Шилдэг амжилт","កំណត់ត្រាល្អបំផុត","Rekor Terbaik","ສະຖິຕິດີທີ່ສຸດ","สถิติที่ดีที่สุด","အကောင်းဆုံးစံချိန်","Pinakamahusay na Rekord","Kỷ lục tốt nhất","Rekór Di'ak Liu","सर्वश्रेष्ठ रिकॉर्ड"
+"TO_TITLE","타이틀로","To Title","Ke Tajuk","タイトルへ","Гарчиг руу","ទៅកាន់ចំណងជើង","Ke Judul","ໄປໜ້າຫົວຂໍ້","ไปยังหน้าหลัก","ခေါင်းစဉ်သို့","Sa Pamagat","Đến Trang Tiêu Đề","Ba Títulu","शीर्षक पर"
+"RESTART","다시하기","Restart","Mulakan Semula","再開","Дахин эхлүүлэх","ចាប់ផ្ដើមឡើងវិញ","Mulai Ulang","ເລີ່ມໃໝ່","เริ่มใหม่","ပြန်စတင်ရန်","Simulan Muli","Khởi động lại","Hahú Fila Fali","पुनः आरंभ करें"
+"GAME_OVER","적에게 당했습니다.","Game Over. You were defeated by the enemy.","Permainan Tamat. Anda dikalahkan oleh musuh.","ゲームオーバー。 敵に敗北しました。","Тоглоом дууслаа. Дайсанд ялагдлаа.","ចប់ហ្គេម។ អ្នកបានចាញ់សត្រូវហើយ។","Permainan Berakhir. Anda dikalahkan oleh musuh.","ເກມຈົບແລ້ວ. ທ່ານຖືກສັດຕູທຳລາຍ.","จบเกม. คุณพ่ายแพ้ต่อศัตรู.","ဂိမ်းပြီးဆုံး။ ရန်သူကြောင့် ရှုံးနိမ့်ခဲ့သည်.","Tapos na ang Laro. Natalo ka ng kalaban.","Trò chơi kết thúc. Bạn đã bị kẻ thù đánh bại.","Game Over. Man lakon husi inimigu.","खेल खत्म। आप दुश्मन से हार गए।"
+"ADVERTISEMENT_NOTICE","광고가 곧 시작됩니다.","Ad will begin shortly.","Iklan akan bermula sebentar lagi.","まもなく広告が始まります。","Тун удахгүй зар сурталчилгаа эхэлнэ.","ពាណិជ្ជកម្មនឹងចាប់ផ្តើមក្នុងពេលឆាប់ៗនេះ។","Iklan akan segera dimulai.","ໂຄສະນາຈະເລີ່ມໃນໄວໆນີ້.","โฆษณาจะเริ่มในไม่ช้า.","ကြော်ငြာကို မကြာမီစတင်ပါမည်။","Magsisimula na ang ad sa ilang sandali.","Quảng cáo sẽ bắt đầu trong giây lát.","Anúnsiu sei hahú tiha oras badak.","विज्ञापन जल्द ही शुरू होगा।"
+"THANKS_FOR_ORDER","이 상품을 구매 해주셔서 감사합니다.","Thank you for purchasing this product.","Terima kasih kerana membeli produk ini.","この商品をご購入いただきありがとうございます。","Энэ бүтээгдэхүүнийг худалдан авсанд баярлалаа.","សូមអរគុណសម្រាប់ការទិញផលិតផលនេះ","Terima kasih telah membeli produk ini.","ຂອບໃຈທີ່ໄດ້ຊື້ສິນຄ້ານີ້","ขอบคุณที่ซื้อสินค้านี้","ဤပစ္စည်းကို ဝယ်ယူပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်။","Salamat sa pagbili ng produktong ito.","Cảm ơn bạn đã mua sản phẩm này.","Obrigadu tan ba sosa buat ida ne'e.","इस उत्पाद को खरीदने के लिए धन्यवाद।"
+"AD_FREE_NAME","광고차단기","Ad blocker","Pemblok iklan","広告ブロッカー","Зар сурталчилгааны хаалт","កម្មវិធីបិទផ្សាយពាណិជ្ជកម្ម","Pemblokir iklan","ຕົວປ້ອງກັນຂໍ້ຄວາມໂຄສະນາ","ตัวบล็อกโฆษณา","ကြော်ငြာတားဆီးစက်","Tagapigil ng ad","Trình chặn quảng cáo","Blokeador Anúnsiu","विज्ञापन अवरोधक"
+"OFFER_MESSAGE","구매하시겠습니까?","Would you like to buy this item?","Adakah anda mahu membeli item ini?","この商品を購入しますか？","Та энэ бүтээгдэхүүнийг худалдан авах уу?","តើអ្នកចង់ទិញវាទេ?","Apakah Anda ingin membeli item ini?","ເຈົ້າຕ້ອງການຊື້ລາຍການນີ້ບໍ?","คุณต้องการซื้อสินค้านี้หรือไม่?","ဤပစ္စည်းကို ဝယ်ယူလိုပါသလား?","Gusto mo bang bilhin ito?","Bạn có muốn mua vật phẩm này không?","Ita hakarak sosa buat ida ne'e?","क्या आप यह वस्तु खरीदना चाहेंगे?"
+"YES","예","Yes","Ya","はい","Тийм","បាទ/ចាស","Ya","ແມ່ນ","ใช่","ဟုတ်ကဲ့","Oo","Có","Sin","हाँ"
+"NO","아니오","No","Tidak","いいえ","Үгүй","ទេ","Tidak","ບໍ່","ไม่ใช่","မဟုတ်ပါ","Hindi","Không","Lae","नहीं"
+"DISMISS_FOR_TODAY","오늘 하루 보지 않기","Dismiss for today","Jangan tunjukkan hari ini","今日は表示しない","Өнөөдөр дахин битгий харуулах","មិនមើលថ្ងៃនេះទេ","Jangan tampilkan lagi hari ini","ຢ່າສະແດງອີກໃນມື້ນີ້","ไม่แสดงอีกในวันนี้","ယနေ့အတွက် မပြရန်","Huwag ipakita ngayon","Không hiển thị hôm nay","Labele haree iha loron ohin","आज के लिए बंद करें"
+"AD_FREE_DESC","더 이상 광고를 보지 않습니다.","You will no longer see ads.","Anda tidak akan melihat iklan lagi.","これ以上広告は表示されません。","Та дахин зар сурталчилгаа харахгүй.","អ្នកនឹងមិនឃើញការផ្សាយពាណិជ្ជកម្មទៀតទេ","Anda tidak akan melihat iklan lagi.","ເຈົ້າຈະບໍ່ໄດ້ເຫັນໂຄສະນາອີກ","คุณจะไม่เห็นโฆษณาอีกต่อไป","မကြော်ငြာတော့ပါ။","Hindi ka na makakakita ng mga ad.","Bạn sẽ không thấy quảng cáo nữa.","Ita sei la haree anúnsiu tan","अब आप विज्ञापन नहीं देखेंगे।"
+"INTRO_NARRATION_0","소른은 당대 최강의 기사다.","Sorn is the strongest knight of his time.","Sorn adalah kesatria paling kuat pada zamannya.","ソルンは当代最強の騎士である。","Сорн бол тухайн үеийнхээ хамгийн хүчирхэг баатар.","ស៊ន គឺជា​អ្នក​ជិះសេះ​ដ៏​ខ្លាំង​បំផុត​ក្នុង​សម័យ​របស់​គាត់។","Sorn adalah ksatria terkuat di zamannya.","ສອນ ເປັນ​ອັດສະລິຍະ​ທີ່​ເຂັ້ມ​ແຂງ​ທີ່ສຸດ​ໃນ​ສະໄໝ​ຂອງ​ລາວ.","ซอร์นคืออัศวินที่แข็งแกร่งที่สุดในยุคของเขา","စွန်သည် သူ၏ခေတ်တွင် အပြင်းထန်ဆုံးသူရဲကောင်းဖြစ်သည်။","Si Sorn ang pinakamalakas na kabalyero sa kanyang panahon.","Sorn là hiệp sĩ mạnh nhất thời đại.","Sorn maklaken baibain iha nia tempu.","सोर्न अपने समय का सबसे मजबूत शूरवीर है।"
+"INTRO_NARRATION_1","예민한 감각으로 자신을 향한 공격을 감지할수 있고,","With keen senses, he can detect attacks directed at him,","Dengan deria tajam, dia boleh mengesan serangan yang ditujukan kepadanya,","鋭敏な感覚で自身に向けられた攻撃を感知でき、","Хурц мэдрэмжээр өөрт чиглэсэн довтолгоог мэдэрч чаддаг,","ដោយ​មាន​អារម្មណ៍​រសើប គាត់​អាច​ចាប់​បាន​ការ​វាយ​ប្រហារ​ដែល​តម្រង់​មក​លើ​គាត់,","Dengan indra yang tajam, dia dapat mendeteksi serangan yang ditujukan padanya,","ດ້ວຍ​ຄວາມ​ຮູ້ສຶກ​ທີ່​ໄວ, ລາວ​ສາມາດ​ກວດ​ສອບ​ການ​ໂຈມ​ຕີ​ທີ່​ມຸ່ງ​ໄປ​ສູ່​ລາວ,","ด้วยประสาทสัมผัสอันว่องไว เขาสามารถตรวจจับการโจมตีที่พุ่งเป้ามาที่เขาได้","အာရုံခံစားမှုရှိသူသည် မိမိကိုပစ်မှတ်ထားသော တိုက်ခိုက်မှုများကို ထောက်လှမ်းနိုင်သည်၊","Sa matalas na pandama, kaya niyang matukoy ang mga atake na nakadirekta sa kanya,","Với giác quan nhạy bén, anh có thể phát hiện các cuộc tấn công nhắm vào mình,","Ho bele detekta atake hasoru nia ho sensu ne’ebé agrik,","तीव्र इंद्रियों से, वह अपनी ओर निर्देशित हमलों का पता लगा सकता है,"
+"INTRO_NARRATION_2","범인은 볼수 조차 없는 없는 속도로 검을 휘두를 수 있다.","He can wield his sword at a speed even the culprit cannot see.","Dia boleh menghayun pedangnya pada kelajuan yang penjenayah pun tidak dapat melihat.","犯人すら見ることができない速度で剣を振るうことができる。","Гэмт хэрэгтэн хараахан харж чадахгүй хурдтайгаар сэлмээ эргүүлэх чадвартай.","គាត់​អាច​បក់​ដាវ​ក្នុង​ល្បឿន​ដែល​សូម្បី​តែ​ជន​ល្មើស​ក៏​មើល​មិន​ឃើញ​ដែរ។","Dia dapat mengayunkan pedangnya dengan kecepatan yang bahkan tidak dapat dilihat oleh pelakunya.","ລາວ​ສາມາດ​ແກວ່ງ​ດາບ​ຂອງ​ລາວ​ດ້ວຍ​ຄວາມ​ໄວ​ທີ່​ແມ່ນ​ແຕ່​ຜູ້​ຮ້າຍ​ກໍ​ເບິ່ງ​ບໍ່​ເຫັນ.","เขาสามารถเหวี่ยงดาบด้วยความเร็วที่แม้แต่ผู้กระทำความผิดก็มองไม่เห็น","သူသည် ရာဇဝတ်ကောင်မမြင်နိုင်သည့် အရှိန်ဖြင့် ဓားကို ဝှေ့ယမ်းနိုင်သည်။","Kaya niyang iwagayway ang kanyang espada sa bilis na hindi man lang makita ng salarin.","Anh ta có thể vung kiếm với tốc độ mà ngay cả kẻ thủ ác cũng không thể nhìn thấy.","Nia bele haneesan espada ho velocidade ne’ebé kulpado mós la bele haree.","वह इतनी तेज़ी से अपनी तलवार चला सकता है कि अपराधी भी उसे देख नहीं पाता।"
+"INTRO_NARRATION_3","그는 마침내 이 정체불명의 던전 최심부에 도달했다.","He finally reached the deepest part of this unknown dungeon.","Dia akhirnya sampai ke bahagian terdalam penjara bawah tanah yang tidak diketahui ini.","彼はようやくこの正体不明のダンジョンの最深部に到達した。","Тэрээр эцэст нь энэ үл мэдэгдэх гянданы хамгийн гүн хэсэгт хүрэв.","គាត់​បាន​ទៅ​ដល់​ចំណុច​ជ្រៅ​បំផុត​នៃ​គុក​ងងឹត​ដែល​មិន​ស្គាល់​អត្តសញ្ញាណ​នេះ។","Dia akhirnya mencapai bagian terdalam dari ruang bawah tanah yang tidak dikenal ini.","ລາວ​ໃນ​ທີ່​ສຸດ​ກໍ​ມາ​ຮອດ​ສ່ວນ​ເລິກ​ທີ່​ສຸດ​ຂອງ​ຫ້ອງ​ໃຕ້​ດິນ​ທີ່​ບໍ່​ຮູ້​ຈັກ​ນີ້.","ในที่สุดเขาก็มาถึงส่วนที่ลึกที่สุดของดันเจี้ยนที่ไม่รู้จักนี้","သူသည် နောက်ဆုံး၌ ဤအမည်မသိမြေအောက်ခန်း၏ အနက်ဆုံးအပိုင်းသို့ ရောက်လာပြီ။","Sa wakas, narating niya ang pinakamalalim na bahagi ng hindi kilalang piitan na ito.","Cuối cùng anh đã đến được phần sâu nhất của hầm ngục vô danh này.","Ikus nia to'o ona parte laran liu husi dungeon ne’ebé la koñesidu.","अंततः वह इस अज्ञात कालकोठरी के सबसे गहरे भाग तक पहुँच गया।"
+"INTRO_NARRATION_4","거기서 마주친 상대는 별거 아닌 해골 병사 하나 였다.","The opponent he encountered there was just a single, unremarkable skeleton soldier.","Lawan yang dihadapinya di sana hanyalah seorang askar rangka biasa.","そこで遭遇した相手は、取るに足らない骸骨兵士一人だった。","Түүний тэнд тааралдсан өрсөлдөгч нь зүгээр л нэг ганцаар, онцгүй араг яс цэрэг байв.","គូប្រជែងដែលគាត់បានជួបនៅទីនោះគឺគ្រាន់តែជាទាហានគ្រោងឆ្អឹងធម្មតាម្នាក់ប៉ុណ្ណោះ។","Lawan yang dia temui di sana hanyalah satu tentara kerangka biasa.","ຄູ່​ແຂ່ງ​ທີ່​ລາວ​ໄດ້​ພົບ​ຢູ່​ນັ້ນ​ແມ່ນ​ພຽງ​ແຕ່​ທະຫານ​ກະດູກ​ທຳມະດາ​ຄົນ​ດຽວ.","คู่ต่อสู้ที่เขาพบที่นั่นเป็นเพียงทหารโครงกระดูกธรรมดาคนเดียวเท่านั้น","သူရင်ဆိုင်ရသည့် ပြိုင်ဘက်မှာ ရိုးရိုးရှင်းရှင်း အရိုးစုစစ်သားတစ်ဦးသာဖြစ်သည်။","Ang kalaban na kanyang nakasalubong doon ay isang simpleng, hindi kapansin-pansing kawal na kalansay lamang.","Đối thủ anh gặp ở đó chỉ là một tên lính xương tầm thường.","Opozisaun ne’ebé nia hasoru iha ne’ebá mak soldadu eskeleton ida de'it.","वहाँ उसका सामना एक साधारण, साधारण कंकाल सैनिक से हुआ।"
+"ENDING_LINE_0","...뭣!?","...What!?",,,,,,,,,,,,
+"THANK_YOU_FOR_PLAY","플레이 해주셔서 감사합니다.",,,,,,,,,,,,,
+"ENDING_LINE_0","...뭣!?","...What!?","...Apa!?","...何だと!?","...Юу!?","...អី!?,","...Apa!?","...ແມ່ນຫຍັງ!?","...อะไรนะ!?","...ဘာလဲ!?","...Ano!?","...Gì!?","...Saida!?","...क्या?!"
+"THANK_YOU_FOR_PLAY","플레이 해주셔서 감사합니다.","Thank you for playing.","Terima kasih kerana bermain.","プレイしていただきありがとうございます。","Тоглосонд баярлалаа.","សូមអរគុណសម្រាប់ការលេង។","Terima kasih telah bermain.","ຂອບໃຈທີ່ຫຼິ້ນ.","ขอบคุณที่เล่น","ကစားပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်။","Salamat sa paglalaro.","Cảm ơn bạn đã chơi.","Obrigada ba joga.","खेलने के लिए धन्यवाद।"
+"PERK_NAME_0","Perk name",,,,,,,,,,,,,
+"PERK_DESC_0","Perk description",,,,,,,,,,,,,
+"LEVEL_FORMAT_0","Level.{0}",,,,,,,,,,,,,
+"SUMMON_MONK","수도사 소환","Summon monk",,,,,,,,,,,,
+"SHEEP_MISSILE","양 미사일","Sheep missile",,,,,,,,,,,,
+"POWDER_KEG","폭탄 통","Powder keg",,,,,,,,,,,,
+"DYNAMITE","다이너마이트","Dynamite",,,,,,,,,,,,

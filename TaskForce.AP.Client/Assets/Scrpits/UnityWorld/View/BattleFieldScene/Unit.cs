@@ -47,6 +47,14 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
 
         private IReadOnlyDictionary<UnitMotionID, string> _clipNameMap;
 
+        private string[] State = {
+            "attack",
+            "idle",
+            "die",
+            "walk",
+            "cast"
+        };        
+
         private void Awake()
         {
             _velocity = new Vector2();
@@ -62,11 +70,11 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
 
             var clipNameMap = new Dictionary<UnitMotionID, string>
             {
-                { UnitMotionID.Attack, "attack" },
-                { UnitMotionID.Stand, "idle" },
-                { UnitMotionID.Die, "die" },
-                { UnitMotionID.Move, "walk" },
-                { UnitMotionID.Cast, "cast" }
+                { UnitMotionID.Attack, State[0] },
+                { UnitMotionID.Stand, State[1] },
+                { UnitMotionID.Die, State[2] },
+                { UnitMotionID.Move, State[3] },
+                { UnitMotionID.Cast, State[4] }
             };
             _clipNameMap = clipNameMap;
         }
@@ -125,7 +133,10 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
         private void StopMoveTo()
         {
             _destination = Vector3.zero;
+            if(_path?.Count > 0)
+            {
             _path.Clear();
+            }
             _pathIndex = 0;
             _speed = 0.0f;
             _pathPoint = new Vector3();
@@ -149,7 +160,7 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
 
         private void FixedUpdate()
         {
-            if (_path.Count > 0)
+            if (_path?.Count > 0)
                 FollowPath();
             else if (_velocity != Vector2.zero)
                 ApplyVelocity(_velocity);

@@ -2306,6 +2306,12 @@ MonoBehaviour:
   - ObjectID: WARRIOR_1
     Prefab: {fileID: 4100691256331878749, guid: e612b59b802d5c1438dbc330ccaf0221, type: 3}
     Root: {fileID: 0}
+  - ObjectID: FLOATING_TEXT_ANIMATOR
+    Prefab: {fileID: 5319785962886376227, guid: 5b91f06bc60c8084fbe7f4f86bf1f9cd, type: 3}
+    Root: {fileID: 0}
+  - ObjectID: SOUL
+    Prefab: {fileID: 5012490685119004226, guid: 9af2fb33ade910f479f7a5b60f7e72fb, type: 3}
+    Root: {fileID: 0}
 --- !u!1 &1315473189
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,19 +5,19 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
     public class Soul : PoolableObject, Core.View.BattleFieldScene.ISoul
     {
         private Core.BattleFieldScene.IFollowable _followTarget;
-        private Vector2 _unitPosition;
+        private Vector3 _unitPosition;
         private System.Numerics.Vector2 _position;
         private float _speed;
 
         private void Awake()
         {
-            _unitPosition = new Vector2();
+            _unitPosition = new Vector3();
         }
 
         public System.Numerics.Vector2 GetPosition()
         {
             _position.X = transform.position.x;
-            _position.Y = transform.position.y;
+            _position.Y = transform.position.z;
 
             return _position;
         }
@@ -30,7 +30,7 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
 
         public void SetPosition(System.Numerics.Vector2 position)
         {
-            transform.position = new UnityEngine.Vector2(position.X, position.Y);
+            transform.position = new Vector3(position.X, transform.position.y, position.Y);
         }
 
         public void Stop()
@@ -43,15 +43,20 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
             if (_followTarget == null)
                 return;
 
-            transform.position = Vector2.MoveTowards(transform.position,
-                GetUnitPosition(), _speed * UnityEngine.Time.deltaTime);
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                GetUnitPosition(),
+                _speed * UnityEngine.Time.deltaTime
+            );
         }
 
-        private Vector2 GetUnitPosition()
+        private Vector3 GetUnitPosition()
         {
             var pos = _followTarget.GetPosition();
+
             _unitPosition.x = pos.X;
-            _unitPosition.y = pos.Y;
+            _unitPosition.z = pos.Y;
+            _unitPosition.y = transform.position.y;
 
             return _unitPosition;
         }

@@ -24,6 +24,8 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
         private float _lastCheckTime;
         private float _nextBlinkTime;
 
+        private readonly Collider[] _overlapResults = new Collider[20];
+
         protected override void CleanUp()
         {
             base.CleanUp();
@@ -34,13 +36,13 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
 
         public void SetPosition(System.Numerics.Vector2 position)
         {
-            transform.position = new Vector3(position.X, position.Y, transform.position.z);
+            transform.position = new Vector3(position.X, 0, position.Y);
         }
 
         public System.Numerics.Vector2 GetPosition()
         {
             var pos = transform.position;
-            return new System.Numerics.Vector2(pos.x, pos.y);
+            return new System.Numerics.Vector2(pos.x, pos.z);
         }
 
         public void Watch(float watchRadius)
@@ -79,9 +81,14 @@ namespace TaskForce.AP.Client.UnityWorld.View.BattleFieldScene
             if (UnityEngine.Time.fixedTime - _lastCheckTime < _watchInterval) return;
             _lastCheckTime = UnityEngine.Time.fixedTime;
 
-            var colliders = Physics2D.OverlapCircleAll(transform.position, _watchRadius);
-            if (colliders.Length > 0)
-                BatchObjectDetectedEvent?.Invoke(this, new BatchObjectDetectedEventArgs(colliders.Select(entry => entry.gameObject.name)));
+            int hitCount = Physics.OverlapSphereNonAlloc(transform.position, _watchRadius, _overlapResults);
+            if (hitCount > 0)
+            {
+                var detectedNames = _overlapResults.Take(hitCount).Select(c => c.gameObject.name);
+                BatchObjectDetectedEvent?.Invoke(this, new BatchObjectDetectedEventArgs(detectedNames));
+                
+                Array.Clear(_overlapResults, 0, _overlapResults.Length);
+            }
         }
 
         private void DetermineNextBlinkTime()

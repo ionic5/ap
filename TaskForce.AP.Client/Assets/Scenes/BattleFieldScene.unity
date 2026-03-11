@@ -2315,6 +2315,12 @@ MonoBehaviour:
   - ObjectID: SHEEP_MISSILE
     Prefab: {fileID: 2153746546371106016, guid: 8ebfb74a997661a49904437f63991384, type: 3}
     Root: {fileID: 0}
+  - ObjectID: POWDER_KEG
+    Prefab: {fileID: 505851039842775508, guid: 77997b3fcc4328248ab280c35173a393, type: 3}
+    Root: {fileID: 0}
+  - ObjectID: EXPLOSION_1
+    Prefab: {fileID: 908433019122156621, guid: 4c88babeaac422749b019635fb50d816, type: 3}
+    Root: {fileID: 0}
 --- !u!1 &1315473189
 GameObject:
   m_ObjectHideFlags: 0

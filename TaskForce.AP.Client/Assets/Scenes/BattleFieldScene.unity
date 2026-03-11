@@ -2312,6 +2312,9 @@ MonoBehaviour:
   - ObjectID: SOUL
     Prefab: {fileID: 5012490685119004226, guid: 9af2fb33ade910f479f7a5b60f7e72fb, type: 3}
     Root: {fileID: 0}
+  - ObjectID: SHEEP_MISSILE
+    Prefab: {fileID: 2153746546371106016, guid: 8ebfb74a997661a49904437f63991384, type: 3}
+    Root: {fileID: 0}
 --- !u!1 &1315473189
 GameObject:
   m_ObjectHideFlags: 0

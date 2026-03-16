@@ -5,27 +5,42 @@ using UnityEngine;
 
 namespace TaskForce.AP.Client.UnityWorld
 {
+    /// <summary>
+    /// 프리팹 기반 오브젝트를 생성하고, 오브젝트 풀링을 통해 재사용을 관리하는 팩토리 클래스.
+    /// 오브젝트 ID별 프리팹 매핑과 사전 준비 핸들러 등록을 지원한다.
+    /// </summary>
     public class ObjectFactory : MonoBehaviour
     {
+        /// <summary>오류 로깅을 위한 로거 인스턴스</summary>
         public Core.ILogger Logger;
 
+        /// <summary>프리팹이 생성될 기본 루트 게임오브젝트</summary>
         [SerializeField]
         private GameObject _defaultRoot;
+        /// <summary>오브젝트 ID와 프리팹 매핑 배열</summary>
         [SerializeField]
         private PrefabContainer[] _prefabContainers;
 
+        /// <summary>오브젝트 ID별 생성 전 사전 준비 핸들러 딕셔너리</summary>
         private Dictionary<string, Action<UnityWorld.Object>> _prepareHandlers;
+        /// <summary>오브젝트 ID별 풀링된 오브젝트 큐 딕셔너리</summary>
         private Dictionary<string, Queue<PoolableObject>> _objectPools;
 
+        /// <summary>
+        /// 오브젝트 ID, 프리팹, 루트 오브젝트를 묶는 직렬화 가능한 컨테이너 클래스.
+        /// </summary>
         [Serializable]
         public class PrefabContainer
         {
+            /// <summary>오브젝트 식별자</summary>
             [SerializeField]
             public string ObjectID;
 
+            /// <summary>인스턴스화할 프리팹</summary>
             [SerializeField]
             public GameObject Prefab;
 
+            /// <summary>생성된 오브젝트의 부모 루트 (null이면 기본 루트 사용)</summary>
             [SerializeField]
             public GameObject Root;
         }
@@ -36,6 +51,12 @@ namespace TaskForce.AP.Client.UnityWorld
             _objectPools = new Dictionary<string, Queue<PoolableObject>>();
         }
 
+        /// <summary>
+        /// 특정 오브젝트 ID에 대한 생성 전 사전 준비 핸들러를 등록한다.
+        /// 오브젝트 생성 시 해당 핸들러가 호출되어 초기 설정을 수행한다.
+        /// </summary>
+        /// <param name="objectID">핸들러를 등록할 오브젝트 식별자</param>
+        /// <param name="handler">오브젝트 생성 시 호출될 사전 준비 핸들러</param>
         public void RegisterPrepareHandler(string objectID, Action<UnityWorld.Object> handler)
         {
             if (string.IsNullOrEmpty(objectID) || handler == null)
@@ -46,6 +67,13 @@ namespace TaskForce.AP.Client.UnityWorld
             _prepareHandlers[objectID] = handler;
         }
 
+        /// <summary>
+        /// 지정된 오브젝트 ID에 해당하는 오브젝트를 풀에서 가져오거나 새로 생성한다.
+        /// 등록된 사전 준비 핸들러가 있으면 호출한다.
+        /// </summary>
+        /// <typeparam name="T">생성할 오브젝트의 타입</typeparam>
+        /// <param name="objectID">생성할 오브젝트의 식별자</param>
+        /// <returns>생성된 오브젝트 인스턴스, 실패 시 null</returns>
         public T Create<T>(string objectID) where T : UnityWorld.Object
         {
             var newObj = GetNewObject<T>(objectID) ?? CreateNewObject<T>(objectID);
@@ -56,6 +84,12 @@ namespace TaskForce.AP.Client.UnityWorld
             return newObj;
         }
 
+        /// <summary>
+        /// 프리팹으로부터 새 오브젝트를 인스턴스화한다.
+        /// </summary>
+        /// <typeparam name="T">생성할 오브젝트의 타입</typeparam>
+        /// <param name="objectID">생성할 오브젝트의 식별자</param>
+        /// <returns>생성된 오브젝트 인스턴스, 실패 시 null</returns>
         private T CreateNewObject<T>(string objectID) where T : UnityWorld.Object
         {
             var container = _prefabContainers.FirstOrDefault(c => c.ObjectID == objectID);
@@ -79,6 +113,12 @@ namespace TaskForce.AP.Client.UnityWorld
             return newObj;
         }
 
+        /// <summary>
+        /// 오브젝트 풀에서 재사용 가능한 오브젝트를 가져온다.
+        /// </summary>
+        /// <typeparam name="T">가져올 오브젝트의 타입</typeparam>
+        /// <param name="objectID">가져올 오브젝트의 식별자</param>
+        /// <returns>풀에서 가져온 오브젝트 인스턴스, 풀이 비어있으면 null</returns>
         private T GetNewObject<T>(string objectID) where T : UnityWorld.Object
         {
             if (!_objectPools.TryGetValue(objectID, out var pool) || pool.Count <= 0)
@@ -96,6 +136,11 @@ namespace TaskForce.AP.Client.UnityWorld
             return pooledObj as T;
         }
 
+        /// <summary>
+        /// 오브젝트를 비활성화하고 풀에 반환한다.
+        /// </summary>
+        /// <param name="objectID">반환할 오브젝트의 식별자</param>
+        /// <param name="obj">풀에 반환할 PoolableObject 인스턴스</param>
         private void Release(string objectID, UnityWorld.PoolableObject obj)
         {
             if (string.IsNullOrEmpty(objectID) || obj == null)

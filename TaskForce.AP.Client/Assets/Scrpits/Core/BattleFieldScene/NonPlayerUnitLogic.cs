@@ -6,25 +6,47 @@ using TaskForce.AP.Client.Core.Entity;
 
 namespace TaskForce.AP.Client.Core.BattleFieldScene
 {
+    /// <summary>
+    /// NPC(비플레이어) 유닛의 AI 로직 클래스.
+    /// 감지 범위 내 적을 탐색하여 접근 및 기본 스킬로 공격하며,
+    /// 카메라 밖으로 나가면 워프 포인트로 재배치된다.
+    /// </summary>
     public class NonPlayerUnitLogic : UnitLogic
     {
+        /// <summary>워프 타이머</summary>
         private readonly Timer _timer;
+        /// <summary>월드 인터페이스</summary>
         private readonly Core.View.BattleFieldScene.IWorld _world;
 
+        /// <summary>현재 주 공격 대상</summary>
         private ITarget _mainTarget;
+        /// <summary>현재 유닛 상태</summary>
         private UnitState _state = UnitState.Initial;
 
+        /// <summary>
+        /// NonPlayerUnitLogic의 생성자.
+        /// </summary>
+        /// <param name="loop">게임 루프</param>
+        /// <param name="timer">타이머</param>
+        /// <param name="world">월드 인터페이스</param>
         public NonPlayerUnitLogic(ILoop loop, Timer timer, View.BattleFieldScene.IWorld world) : base(loop)
         {
             _timer = timer;
             _world = world;
         }
 
+        /// <summary>
+        /// NPC 유닛의 상태를 나타내는 열거형.
+        /// </summary>
         private enum UnitState
         {
+            /// <summary>초기 상태</summary>
             Initial,
+            /// <summary>대기 상태</summary>
             Wait,
+            /// <summary>스킬 사용 중 상태</summary>
             UsingSkill,
+            /// <summary>대상에게 이동 중 상태</summary>
             MoveToTarget
         }
 

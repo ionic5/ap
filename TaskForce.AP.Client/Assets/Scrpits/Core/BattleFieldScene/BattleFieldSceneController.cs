@@ -6,23 +6,53 @@ using TaskForce.AP.Client.Core.View.Scenes;
 
 namespace TaskForce.AP.Client.Core.BattleFieldScene
 {
+    /// <summary>
+    /// 전투 필드 씬의 전체 흐름을 제어하는 컨트롤러 클래스.
+    /// 플레이어 유닛 생성, 경험치/레벨 UI 갱신, 레벨업 시 스킬 선택 창 표시 등을 담당한다.
+    /// </summary>
     public class BattleFieldSceneController
     {
+        /// <summary>전투 필드 씬 뷰 인터페이스</summary>
         private readonly IBattleFieldScene _scene;
+        /// <summary>월드 인터페이스 (스폰 위치 등 제공)</summary>
         private readonly IWorld _world;
+        /// <summary>플레이어 유닛을 추적하는 카메라</summary>
         private readonly IFollowCamera _followCamera;
+        /// <summary>윈도우(팝업) 열기 담당 객체</summary>
         private readonly WindowOpener _windowOpener;
+        /// <summary>게임 데이터 저장소</summary>
         private readonly GameDataStore _gameDataStore;
+        /// <summary>플레이어 유닛 생성 팩토리 함수</summary>
         private readonly Func<Entity.Unit, IUnit> _createPlayerUnit;
+        /// <summary>난수 생성기</summary>
         private readonly Core.Random _random;
+        /// <summary>로거</summary>
         private readonly ILogger _logger;
+        /// <summary>유닛 엔티티 생성 팩토리 함수</summary>
         private readonly Func<string, Entity.Unit> _createUnitEntity;
+        /// <summary>스킬 엔티티 생성 팩토리 함수</summary>
         private readonly Func<Entity.Unit, string, int, Entity.ISkill> _createSkillEntity;
 
+        /// <summary>파괴 여부 플래그</summary>
         private bool _isDestroyed;
+        /// <summary>현재 플레이어 유닛</summary>
         private IUnit _unit;
+        /// <summary>현재 플레이어 유닛 엔티티</summary>
         private Entity.Unit _unitEntity;
 
+        /// <summary>
+        /// BattleFieldSceneController의 생성자.
+        /// </summary>
+        /// <param name="scene">전투 필드 씬 뷰</param>
+        /// <param name="world">월드 인터페이스</param>
+        /// <param name="followCamera">추적 카메라</param>
+        /// <param name="windowOpener">윈도우 열기 담당 객체</param>
+        /// <param name="createUnit">플레이어 유닛 생성 팩토리 함수</param>
+        /// <param name="gameDataStore">게임 데이터 저장소</param>
+        /// <param name="random">난수 생성기</param>
+        /// <param name="logger">로거</param>
+        /// <param name="createSkillEntity">스킬 엔티티 생성 팩토리 함수</param>
+        /// <param name="createUnitEntity">유닛 엔티티 생성 팩토리 함수</param>
         public BattleFieldSceneController(IBattleFieldScene scene, IWorld world, IFollowCamera followCamera,
             WindowOpener windowOpener, Func<Entity.Unit, IUnit> createUnit,
             GameDataStore gameDataStore, Random random, ILogger logger,
@@ -42,6 +72,10 @@ namespace TaskForce.AP.Client.Core.BattleFieldScene
             _createUnitEntity = createUnitEntity;
         }
 
+        /// <summary>
+        /// 씬을 시작한다. 플레이어 유닛을 생성하고, 스폰 위치에 배치하며,
+        /// UI를 갱신하고, 이벤트 핸들러를 등록한다.
+        /// </summary>
         public void Start()
         {
             _unitEntity = _createUnitEntity.Invoke("WARRIOR_0");

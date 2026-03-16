@@ -3,10 +3,16 @@ using UnityEngine;
 
 namespace TaskForce.AP.Client.UnityWorld
 {
+    /// <summary>
+    /// 애플리케이션의 진입점 역할을 하는 MonoBehaviour 컴포넌트.
+    /// 핵심 시스템 초기화, 데이터 로딩, 첫 씬 로드를 수행한다.
+    /// </summary>
     public class Starter : MonoBehaviour
     {
+        /// <summary>화면 전환 관리 컴포넌트</summary>
         [SerializeField]
         private Screen _screen;
+        /// <summary>로딩 블라인드 게임오브젝트</summary>
         [SerializeField]
         private GameObject _loadingBlind;
 
@@ -18,6 +24,10 @@ namespace TaskForce.AP.Client.UnityWorld
             StartAsync();
         }
 
+        /// <summary>
+        /// 핵심 시스템을 초기화하고, 에셋 경로/게임 데이터/텍스트를 로드한 뒤
+        /// 전투 씬을 로드하는 비동기 시작 메서드.
+        /// </summary>
         private async void StartAsync()
         {
             var application = new EditorApplication();

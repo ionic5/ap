@@ -10,16 +10,38 @@ using UnityEngine;
 
 namespace TaskForce.AP.Client.UnityWorld
 {
+    /// <summary>
+    /// 전투 씬(BattleFieldScene)의 로딩을 담당하는 클래스.
+    /// 씬 전환, 팩토리 구성, 스킬 생성자 등록, 유닛 생성, 이벤트 바인딩 등
+    /// 전투 씬에 필요한 모든 초기화 작업을 수행한다.
+    /// </summary>
     public class BattleFieldSceneLoader
     {
+        /// <summary>화면 전환 및 로딩 블라인드를 관리하는 Screen 인스턴스</summary>
         private readonly Screen _screen;
+        /// <summary>게임 데이터 저장소</summary>
         private readonly GameDataStore _gameDataStore;
+        /// <summary>난수 생성기</summary>
         private readonly Core.Random _random;
+        /// <summary>시간 관리 인스턴스</summary>
         private readonly Time _time;
+        /// <summary>텍스트 저장소</summary>
         private readonly TextStore _textStore;
+        /// <summary>에셋 로더</summary>
         private readonly AssetLoader _assetLoader;
+        /// <summary>로거 인스턴스</summary>
         private readonly Core.ILogger _logger;
 
+        /// <summary>
+        /// BattleFieldSceneLoader의 새 인스턴스를 초기화한다.
+        /// </summary>
+        /// <param name="screen">화면 전환 관리 객체</param>
+        /// <param name="gameDataStore">게임 데이터 저장소</param>
+        /// <param name="random">난수 생성기</param>
+        /// <param name="time">시간 관리 객체</param>
+        /// <param name="textStore">텍스트 저장소</param>
+        /// <param name="assetLoader">에셋 로더</param>
+        /// <param name="logger">로거 인스턴스</param>
         public BattleFieldSceneLoader(Screen screen, GameDataStore gameDataStore,
             Core.Random random, Time time, TextStore textStore,
             AssetLoader assetLoader, Core.ILogger logger)
@@ -33,6 +55,11 @@ namespace TaskForce.AP.Client.UnityWorld
             _logger = logger;
         }
 
+        /// <summary>
+        /// 전투 씬을 비동기적으로 로드한다.
+        /// 로딩 블라인드 표시, 기존 씬 파괴, 새 씬 부착, 각종 팩토리 및 시스템 초기화,
+        /// 스킬 생성자 등록, 이벤트 핸들러 바인딩, 적 유닛 스포너 시작 등을 순차적으로 수행한다.
+        /// </summary>
         public async void Load()
         {
             await _screen.ShowLoadingBlind();

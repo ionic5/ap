@@ -7,17 +7,36 @@ using TaskForce.AP.Client.Core.Entity;
 
 namespace TaskForce.AP.Client.Core.BattleFieldScene
 {
+    /// <summary>
+    /// 플레이어 유닛의 로직 클래스.
+    /// 조이스틱 입력에 따라 이동하고, 범위 내 적에게 자동으로 기본 스킬을 사용하며,
+    /// 근처 소울을 흡수하여 경험치를 획득한다.
+    /// </summary>
     public class PlayerUnitLogic : UnitLogic
     {
+        /// <summary>조이스틱 입력 인터페이스</summary>
         private readonly IJoystick _joystick;
+        /// <summary>소울 검색 인터페이스</summary>
         private readonly ISoulFinder _soulFinder;
+        /// <summary>검색된 소울 임시 저장 리스트</summary>
         private readonly List<Soul> _souls;
+        /// <summary>게임 데이터 저장소</summary>
         private readonly GameDataStore _gameDataStore;
 
+        /// <summary>현재 유닛 상태</summary>
         private UnitState _state = UnitState.Initial;
+        /// <summary>현재 사용 중인 스킬</summary>
         private Skills.ISkill _usingSkill;
+        /// <summary>마지막으로 공격한 대상</summary>
         private ITarget _lastTarget;
 
+        /// <summary>
+        /// PlayerUnitLogic의 생성자.
+        /// </summary>
+        /// <param name="loop">게임 루프</param>
+        /// <param name="joystick">조이스틱 입력 인터페이스</param>
+        /// <param name="soulFinder">소울 검색 인터페이스</param>
+        /// <param name="gameDataStore">게임 데이터 저장소</param>
         public PlayerUnitLogic(ILoop loop, IJoystick joystick, ISoulFinder soulFinder,
             GameDataStore gameDataStore) : base(loop)
         {
@@ -27,11 +46,18 @@ namespace TaskForce.AP.Client.Core.BattleFieldScene
             _souls = new List<Soul>();
         }
 
+        /// <summary>
+        /// 플레이어 유닛의 상태를 나타내는 열거형.
+        /// </summary>
         private enum UnitState
         {
+            /// <summary>초기 상태</summary>
             Initial,
+            /// <summary>대기 상태</summary>
             Wait,
+            /// <summary>이동 상태</summary>
             Move,
+            /// <summary>스킬 사용 중 상태</summary>
             UsingSkill
         }
 

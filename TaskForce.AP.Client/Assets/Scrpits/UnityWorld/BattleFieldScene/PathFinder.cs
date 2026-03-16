@@ -3,17 +3,34 @@ using UnityEngine;
 
 namespace TaskForce.AP.Client.UnityWorld.BattleFieldScene
 {
+    /// <summary>
+    /// A* 알고리즘을 사용하여 타일맵 그리드 위에서 최단 경로를 탐색하는 클래스.
+    /// 탐색된 경로는 Raycast 기반 최적화를 통해 불필요한 중간 지점을 제거한다.
+    /// </summary>
     public class PathFinder
     {
+        /// <summary>경로 탐색에 사용되는 타일맵 그리드</summary>
         private readonly TilemapGrid _grid;
+        /// <summary>경로 최적화 시 충돌 판정에 사용되는 레이어 마스크</summary>
         public LayerMask _collisionTileMask;
 
+        /// <summary>
+        /// PathFinder 인스턴스를 생성한다.
+        /// </summary>
+        /// <param name="grid">경로 탐색 대상 타일맵 그리드</param>
+        /// <param name="collisionTileMask">충돌 타일 레이어 마스크</param>
         public PathFinder(TilemapGrid grid, LayerMask collisionTileMask)
         {
             _grid = grid;
             _collisionTileMask = collisionTileMask;
         }
 
+        /// <summary>
+        /// 시작 위치에서 목표 위치까지의 최단 경로를 A* 알고리즘으로 탐색한다.
+        /// </summary>
+        /// <param name="startPos">시작 월드 좌표</param>
+        /// <param name="targetPos">목표 월드 좌표</param>
+        /// <returns>경로를 구성하는 2D 좌표 리스트. 경로를 찾지 못하면 null</returns>
         public List<Vector2> FindPath(Vector3 startPos, Vector3 targetPos)
         {
             Node startNode = _grid.NodeFromWorldPoint(startPos);
@@ -66,6 +83,12 @@ namespace TaskForce.AP.Client.UnityWorld.BattleFieldScene
             return null;
         }
 
+        /// <summary>
+        /// 목표 노드에서 시작 노드까지 부모 노드를 역추적하여 경로를 생성한다.
+        /// </summary>
+        /// <param name="startNode">시작 노드</param>
+        /// <param name="endNode">목표 노드</param>
+        /// <returns>최적화된 2D 좌표 경로 리스트</returns>
         List<Vector2> RetracePath(Node startNode, Node endNode)
         {
             var path = new List<Vector2>();
@@ -87,6 +110,11 @@ namespace TaskForce.AP.Client.UnityWorld.BattleFieldScene
             return path;
         }
 
+        /// <summary>
+        /// 지정된 노드의 주변 8방향 이웃 노드들을 반환한다.
+        /// </summary>
+        /// <param name="node">중심 노드</param>
+        /// <returns>유효한 이웃 노드 리스트</returns>
         List<Node> GetNeighbours(Node node)
         {
             List<Node> neighbours = new List<Node>();
@@ -110,6 +138,12 @@ namespace TaskForce.AP.Client.UnityWorld.BattleFieldScene
             return neighbours;
         }
 
+        /// <summary>
+        /// 두 노드 사이의 거리를 계산한다. 대각선 이동은 14, 직선 이동은 10의 비용을 사용한다.
+        /// </summary>
+        /// <param name="nodeA">첫 번째 노드</param>
+        /// <param name="nodeB">두 번째 노드</param>
+        /// <returns>두 노드 사이의 추정 이동 비용</returns>
         int GetDistance(Node nodeA, Node nodeB)
         {
             int dstX = Mathf.Abs(nodeA.GridX - nodeB.GridX);
@@ -120,6 +154,11 @@ namespace TaskForce.AP.Client.UnityWorld.BattleFieldScene
             return 14 * dstX + 10 * (dstY - dstX);
         }
 
+        /// <summary>
+        /// Raycast를 이용하여 직선 이동이 가능한 구간의 중간 경유점을 제거하고 경로를 최적화한다.
+        /// </summary>
+        /// <param name="originalPath">원본 경로 좌표 리스트</param>
+        /// <returns>최적화된 경로 좌표 리스트</returns>
         public List<Vector2> OptimizePath(List<Vector2> originalPath)
         {
             List<Vector2> optimized = new List<Vector2>();

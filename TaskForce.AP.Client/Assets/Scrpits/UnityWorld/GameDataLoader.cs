@@ -85,12 +85,12 @@ namespace TaskForce.AP.Client.UnityWorld
                     UnitID = row["unitID"],
                     AttributeID = row["attributeID"]
                 }, gameDataStore.AddUnitAttribute),
-                LoadTable(AssetID.Attribute, row => new Core.GameData.Attribute {
+                LoadTable(AssetID.LevelAttribute, row => new Core.GameData.LevelAttribute {
                     ID = row["id"],
                     Level = int.Parse(row["level"]),
                     AttributeID = row["attributeID"],
                     Value = new Core.Attribute(row["value"])
-                }, gameDataStore.AddAttribute),
+                }, gameDataStore.AddLevelAttribute),
                 LoadTable(AssetID.AttributeSet, row => new Core.GameData.AttributeSet {
                     ID = row["id"],
                     AttributeID = row["attributeID"]

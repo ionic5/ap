@@ -1,6 +1,6 @@
 ﻿namespace TaskForce.AP.Client.Core.GameData
 {
-    public class Attribute
+    public class LevelAttribute
     {
         public string ID;
         public int Level;

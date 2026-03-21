@@ -25,7 +25,7 @@
         public const string CoefficientFormulaSet = "COEFFICIENT_FORMULA_SET";
 
         public const string UnitDefaultActiveSkill = "UNIT_DEFAULT_ACTIVE_SKILL";
-        public const string Attribute = "ATTRIBUTE";
+        public const string LevelAttribute = "LEVEL_ATTRIBUTE";
         public const string UnitAttribute = "UNIT_ATTRIBUTE";
     }
 }

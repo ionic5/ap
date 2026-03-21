@@ -24,7 +24,7 @@ namespace TaskForce.AP.Client.Core
         private readonly List<ModifyAttributeSkill> _modifyAttributeSkills;
         private readonly List<CoefficientFormulaSet> _coefficientFormulaSets;
         private readonly List<UnitDefaultActiveSkill> _unitDefaultActiveSkill;
-        private readonly List<GameData.Attribute> _attributes;
+        private readonly List<GameData.LevelAttribute> _levelAttributes;
         private readonly List<UnitAttribute> _unitAttributes;
         private float _soulDropRate;
 
@@ -52,7 +52,7 @@ namespace TaskForce.AP.Client.Core
             _levelUpRewardSkills = new List<LevelUpRewardSkill>();
             _coefficientFormulaSets = new List<CoefficientFormulaSet>();
             _attributeSets = new List<AttributeSet>();
-            _attributes = new List<GameData.Attribute>();
+            _levelAttributes = new List<GameData.LevelAttribute>();
             _modifyAttributeSkills = new List<ModifyAttributeSkill>();
             _modifyAttributeSkillsBySkillID = new Dictionary<string, IEnumerable<ModifyAttributeSkill>>();
             _coefficientFormulasBySetID = new Dictionary<string, Dictionary<string, Formula>>();
@@ -83,9 +83,9 @@ namespace TaskForce.AP.Client.Core
             _unitAttributes.Add(entry);
         }
 
-        public void AddAttribute(GameData.Attribute entry)
+        public void AddLevelAttribute(GameData.LevelAttribute entry)
         {
-            _attributes.Add(entry);
+            _levelAttributes.Add(entry);
         }
 
         public void AddLevelUpRewardSkill(LevelUpRewardSkill entry)

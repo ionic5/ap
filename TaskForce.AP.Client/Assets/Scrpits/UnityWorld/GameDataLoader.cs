@@ -49,16 +49,9 @@ namespace TaskForce.AP.Client.UnityWorld
                     Time = float.Parse(row["time"]),
                     MaxEnemyUnitCount = int.Parse(row["maxEnemyUnitCount"])
                 }, gameDataStore.AddStage),
-                LoadTable(AssetID.UnitBaseAttribute, row => new UnitBaseAttribute {
-                    ID = row["id"],
-                    AttributeID = row["attributeID"],
-                    Value = new Core.Attribute(float.Parse(row["value"]))
-                }, gameDataStore.AddUnitBaseAttribute),
                 LoadTable(AssetID.Unit, row => new Core.GameData.Unit {
                     ID = row["id"],
-                    BaseAttributeID = row["baseAttributeID"],
-                    UnitBodyID = row["unitBodyID"],
-                    AttributeGrowthFormulaID = row["growthFormulaID"]
+                    UnitBodyID = row["unitBodyID"]
                 }, gameDataStore.AddUnit),
                 LoadTable(AssetID.NonPlayerUnitLogic, row => new NonPlayerUnitLogic {
                     UnitID = row["unitID"],

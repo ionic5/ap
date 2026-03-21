@@ -13,7 +13,6 @@ namespace TaskForce.AP.Client.Core
         private readonly List<Stage> _stages;
         private readonly List<Unit> _units;
         private readonly List<NonPlayerUnitLogic> _nonPlayerUnitLogics;
-        private readonly List<UnitBaseAttribute> _unitBaseAttributes;
         private readonly List<ModifyAttributeEffect> _modifyAttributeEffects;
         private readonly List<GrowthFormula> _growthFormulas;
         private readonly List<Formula> _formulas;
@@ -41,7 +40,6 @@ namespace TaskForce.AP.Client.Core
             _modifyAttributeEffects = new List<ModifyAttributeEffect>();
             _stageEnemyUnits = new List<StageEnemyUnit>();
             _stages = new List<Stage>();
-            _unitBaseAttributes = new List<UnitBaseAttribute>();
             _units = new List<Unit>();
             _nonPlayerUnitLogics = new List<NonPlayerUnitLogic>();
             _growthFormulas = new List<GrowthFormula>();
@@ -114,11 +112,6 @@ namespace TaskForce.AP.Client.Core
         public void AddUnit(Unit entry)
         {
             _units.Add(entry);
-        }
-
-        public void AddUnitBaseAttribute(UnitBaseAttribute entry)
-        {
-            _unitBaseAttributes.Add(entry);
         }
 
         public void AddStage(Stage entry)
@@ -233,11 +226,6 @@ namespace TaskForce.AP.Client.Core
         public IEnumerable<NonPlayerUnitLogic> GetNonPlayerUnitLogics()
         {
             return _nonPlayerUnitLogics;
-        }
-
-        public IEnumerable<UnitBaseAttribute> GetUnitBaseAttributes()
-        {
-            return _unitBaseAttributes;
         }
 
         public IEnumerable<GrowthFormula> GetGrowthFormulas()

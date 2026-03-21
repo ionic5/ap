@@ -3,8 +3,6 @@
     public class Unit
     {
         public string ID;
-        public string BaseAttributeID;
         public string UnitBodyID;
-        public string AttributeGrowthFormulaID;
     }
 }

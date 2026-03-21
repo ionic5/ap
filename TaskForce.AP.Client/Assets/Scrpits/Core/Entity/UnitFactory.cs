@@ -29,17 +29,6 @@ namespace TaskForce.AP.Client.Core.Entity
             var attributeMediator = new AttributeMediator(_gameDataStore, _logger);
             var entity = new Entity.Unit(_gameDataStore, attributeMediator);
 
-            var gdBaseAttributes = _gameDataStore.GetUnitBaseAttributes().Where(entry => entry.ID == gdUnit.BaseAttributeID);
-            if (gdBaseAttributes.Count() == 0)
-                _logger.Warn($"There is no base stat for unit id ({unitID}).");
-            var baseAttributes = new Dictionary<string, Attribute>();
-            foreach (var entry in gdBaseAttributes)
-                baseAttributes[entry.AttributeID] = entry.Value;
-            entity.SetBaseAttributes(baseAttributes);
-
-            var attributeGrowthFormulas = _gameDataStore.GetGrowthFormulas().Where(entry => entry.ID == gdUnit.AttributeGrowthFormulaID);
-            entity.SetAttributeGrowthFormulas(attributeGrowthFormulas);
-
             entity.SetUnitBodyID(gdUnit.UnitBodyID);
             entity.SetLevel(1);
 

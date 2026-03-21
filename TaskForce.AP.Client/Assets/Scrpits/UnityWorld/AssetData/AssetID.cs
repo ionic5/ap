@@ -10,7 +10,6 @@
         public const string ModifyAttributeEffect = "MODIFY_ATTRIBUTE_EFFECT";
         public const string StageEnemyUnit = "STAGE_ENEMY_UNIT";
         public const string Stage = "STAGE";
-        public const string UnitBaseAttribute = "UNIT_BASE_ATTRIBUTE";
         public const string Unit = "UNIT";
 
         public const string NonPlayerUnitLogic = "NON_PLAYER_UNIT_LOGIC";

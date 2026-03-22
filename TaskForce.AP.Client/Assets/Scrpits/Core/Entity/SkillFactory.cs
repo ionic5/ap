@@ -48,12 +48,7 @@ namespace TaskForce.AP.Client.Core.Entity
                 return skill;
             }
 
-            var attributeMediator = new AttributeMediator(_gameDataStore, _logger);
-
-            attributeMediator.SetBaseAttributes(_gameDataStore.GetSkillBaseAttributes(skillID));
-            attributeMediator.SetGrowthFormulas(_gameDataStore.GetSkillGrowthFormulas(skillID));
-
-            return new Entity.CommonSkill(skillID, skillData, _textStore, attributeMediator);
+            return null;
         }
     }
 }

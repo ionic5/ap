@@ -30,3 +30,4 @@
 "UNIT_DEFAULT_ACTIVE_SKILL","Assets/Addressables/GameData/UnitDefaultActiveSkill.csv"
 "LEVEL_ATTRIBUTE","Assets/Addressables/GameData/LevelAttribute.csv"
 "BASE_ATTRIBUTE","Assets/Addressables/GameData/BaseAttribute.csv"
+"SKILL_LEVEL_ATTRIBUTE","Assets/Addressables/GameData/SkillLevelAttribute.csv"

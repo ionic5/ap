@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TaskForce.AP.Client.Core.GameData;
@@ -16,7 +17,6 @@ namespace TaskForce.AP.Client.Core
         private readonly List<ModifyAttributeEffect> _modifyAttributeEffects;
         private readonly List<GrowthFormula> _growthFormulas;
         private readonly List<Formula> _formulas;
-        private readonly List<SkillGrowthFormula> _skillGrowthFormulas;
         private readonly List<UnitDefaultSkill> _unitDefaultSkills;
         private readonly List<Skill> _skills;
         private readonly List<LevelUpRewardSkill> _levelUpRewardSkills;
@@ -26,6 +26,7 @@ namespace TaskForce.AP.Client.Core
         private readonly List<UnitDefaultActiveSkill> _unitDefaultActiveSkill;
         private readonly List<GameData.LevelAttribute> _levelAttributes;
         private readonly List<GameData.BaseAttribute> _baseAttributes;
+        private readonly List<SkillLevelAttribute> _skillLevelAttributes;
         private float _soulDropRate;
 
         private Dictionary<string, Formula> _formulasByID;
@@ -48,7 +49,6 @@ namespace TaskForce.AP.Client.Core
             _formulas = new List<Formula>();
             _unitDefaultSkills = new List<UnitDefaultSkill>();
             _skills = new List<Skill>();
-            _skillGrowthFormulas = new List<SkillGrowthFormula>();
             _levelUpRewardSkills = new List<LevelUpRewardSkill>();
             _coefficientFormulaSets = new List<CoefficientFormulaSet>();
             _attributeSets = new List<AttributeSet>();
@@ -58,6 +58,7 @@ namespace TaskForce.AP.Client.Core
             _coefficientFormulasBySetID = new Dictionary<string, Dictionary<string, Formula>>();
             _unitDefaultActiveSkill = new List<UnitDefaultActiveSkill>();
             _baseAttributes = new List<GameData.BaseAttribute>();
+            _skillLevelAttributes = new List<SkillLevelAttribute>();
         }
 
         public void Bake()
@@ -98,9 +99,9 @@ namespace TaskForce.AP.Client.Core
             _skills.Add(entry);
         }
 
-        public void AddSkillGrowthFormula(SkillGrowthFormula entry)
+        public void AddSkillLevelAtrribute(SkillLevelAttribute entry)
         {
-            _skillGrowthFormulas.Add(entry);
+            _skillLevelAttributes.Add(entry);
         }
 
         public void AddUnitDefaultSkill(UnitDefaultSkill entry)
@@ -138,7 +139,7 @@ namespace TaskForce.AP.Client.Core
             _stageEnemyUnits.Add(entry);
         }
 
-        public void AddSkillAttribute(SkillBaseAttribute entry)
+        public void AddSkillBaseAttribute(SkillBaseAttribute entry)
         {
             _skillBaseAttributes.Add(entry);
         }
@@ -265,17 +266,6 @@ namespace TaskForce.AP.Client.Core
         public IEnumerable<UnitDefaultSkill> GetUnitDefaultSkills()
         {
             return _unitDefaultSkills;
-        }
-
-        public IEnumerable<SkillGrowthFormula> GetSkillGrowthFormulas()
-        {
-            return _skillGrowthFormulas;
-        }
-
-        public IEnumerable<GrowthFormula> GetSkillGrowthFormulas(string skillID)
-        {
-            var growthFormulaID = GetSkillGrowthFormulas().Where(entry => entry.SkillID == skillID).Select(entry => entry.GrowthFormulaID).FirstOrDefault();
-            return GetGrowthFormulas(growthFormulaID);
         }
 
         public IEnumerable<LevelUpRewardSkill> GetLevelUpRewardSkills()

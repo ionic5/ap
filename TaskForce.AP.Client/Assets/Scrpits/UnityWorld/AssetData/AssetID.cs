@@ -26,7 +26,6 @@
 
         public const string UnitDefaultActiveSkill = "UNIT_DEFAULT_ACTIVE_SKILL";
         public const string LevelAttribute = "LEVEL_ATTRIBUTE";
-        public const string UnitAttribute = "UNIT_ATTRIBUTE";
-        public const string Attribute = "ATTRIBUTE";
+        public const string BaseAttribute = "BASE_ATTRIBUTE";
     }
 }

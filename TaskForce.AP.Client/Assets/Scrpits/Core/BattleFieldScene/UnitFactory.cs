@@ -114,8 +114,7 @@ namespace TaskForce.AP.Client.Core.BattleFieldScene
                 return null;
             }
 
-            var unitAttr = _gameDataStore.GetUnitAttributeByUnitID(unitID);
-            var entity = new Entity.Unit(_gameDataStore, _gameDataStore.GetAttributes(unitAttr.AttributeID), _gameDataStore.GetLevelAttributes(unitAttr.LevelAttributeID));
+            var entity = new Entity.Unit(_gameDataStore, _gameDataStore.GetBaseAttributes(gdUnit.BaseAttributeID), _gameDataStore.GetLevelAttributes(gdUnit.LevelAttributeID));
 
             entity.SetLevel(level);
 

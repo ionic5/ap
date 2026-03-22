@@ -3,5 +3,7 @@
     public class Unit
     {
         public string ID;
+        public string BaseAttributeID;
+        public string LevelAttributeID;
     }
 }

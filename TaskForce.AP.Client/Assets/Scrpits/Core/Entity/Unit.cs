@@ -26,17 +26,17 @@ namespace TaskForce.AP.Client.Core.Entity
 
         private readonly AttributeStore _attributeStore;
         private readonly Dictionary<string, IActiveSkill> _skills;
-        private readonly IEnumerable<GameData.Attribute> _attributes;
+        private readonly IEnumerable<GameData.BaseAttribute> _baseAttributes;
         private readonly IEnumerable<GameData.LevelAttribute> _levelAttributes;
         private readonly List<IModifyAttributeEffect> _modifyAttributeEffects;
 
-        public Unit(GameDataStore gameDataStore, IEnumerable<GameData.Attribute> attributes, IEnumerable<LevelAttribute> levelAttributes)
+        public Unit(GameDataStore gameDataStore, IEnumerable<GameData.BaseAttribute> attributes, IEnumerable<LevelAttribute> levelAttributes)
         {
             _gameDataStore = gameDataStore;
 
             _skills = new Dictionary<string, IActiveSkill>();
 
-            _attributes = attributes;
+            _baseAttributes = attributes;
             _levelAttributes = levelAttributes;
             _attributeStore = new AttributeStore();
             _modifyAttributeEffects = new List<IModifyAttributeEffect>();
@@ -233,7 +233,7 @@ namespace TaskForce.AP.Client.Core.Entity
         {
             _attributeStore.Clear();
 
-            foreach (var entry in _attributes)
+            foreach (var entry in _baseAttributes)
                 _attributeStore.Set(entry.AttributeID, entry.Value);
             foreach (var entry in _levelAttributes.Where(entry => entry.Level == _level))
                 _attributeStore.Set(entry.AttributeID, entry.Value);

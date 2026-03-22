@@ -25,8 +25,7 @@ namespace TaskForce.AP.Client.Core
         private readonly List<CoefficientFormulaSet> _coefficientFormulaSets;
         private readonly List<UnitDefaultActiveSkill> _unitDefaultActiveSkill;
         private readonly List<GameData.LevelAttribute> _levelAttributes;
-        private readonly List<GameData.Attribute> _attributes;
-        private readonly List<UnitAttribute> _unitAttributes;
+        private readonly List<GameData.BaseAttribute> _baseAttributes;
         private float _soulDropRate;
 
         private Dictionary<string, Formula> _formulasByID;
@@ -58,8 +57,7 @@ namespace TaskForce.AP.Client.Core
             _modifyAttributeSkillsBySkillID = new Dictionary<string, IEnumerable<ModifyAttributeSkill>>();
             _coefficientFormulasBySetID = new Dictionary<string, Dictionary<string, Formula>>();
             _unitDefaultActiveSkill = new List<UnitDefaultActiveSkill>();
-            _unitAttributes = new List<UnitAttribute>();
-            _attributes = new List<GameData.Attribute>();
+            _baseAttributes = new List<GameData.BaseAttribute>();
         }
 
         public void Bake()
@@ -80,19 +78,14 @@ namespace TaskForce.AP.Client.Core
                     entry => GetFormulaByID(entry.FormulaID)));
         }
 
-        public void AddUnitAttribute(UnitAttribute entry)
-        {
-            _unitAttributes.Add(entry);
-        }
-
         public void AddLevelAttribute(GameData.LevelAttribute entry)
         {
             _levelAttributes.Add(entry);
         }
 
-        public void AddAttribute(GameData.Attribute entry)
+        public void AddBaseAttribute(GameData.BaseAttribute entry)
         {
-            _attributes.Add(entry);
+            _baseAttributes.Add(entry);
         }
 
         public void AddLevelUpRewardSkill(LevelUpRewardSkill entry)
@@ -331,14 +324,9 @@ namespace TaskForce.AP.Client.Core
             return _unitDefaultActiveSkill.FirstOrDefault(entry => entry.UnitID == unitID);
         }
 
-        public UnitAttribute GetUnitAttributeByUnitID(string unitID)
+        public IEnumerable<GameData.BaseAttribute> GetBaseAttributes(string baseAttributeID)
         {
-            return _unitAttributes.FirstOrDefault(entry => entry.UnitID == unitID);
-        }
-
-        public IEnumerable<GameData.Attribute> GetAttributes(string attributeID)
-        {
-            return _attributes.Where(entry => entry.ID == attributeID);
+            return _baseAttributes.Where(entry => entry.ID == baseAttributeID);
         }
 
         public IEnumerable<LevelAttribute> GetLevelAttributes(string levelAttributeID)

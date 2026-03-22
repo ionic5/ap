@@ -50,7 +50,9 @@ namespace TaskForce.AP.Client.UnityWorld
                     MaxEnemyUnitCount = int.Parse(row["maxEnemyUnitCount"])
                 }, gameDataStore.AddStage),
                 LoadTable(AssetID.Unit, row => new Core.GameData.Unit {
-                    ID = row["id"]
+                    ID = row["id"],
+                    BaseAttributeID = row["baseAttributeID"],
+                    LevelAttributeID = row["levelAttributeID"]
                 }, gameDataStore.AddUnit),
                 LoadTable(AssetID.NonPlayerUnitLogic, row => new NonPlayerUnitLogic {
                     UnitID = row["unitID"],
@@ -80,22 +82,17 @@ namespace TaskForce.AP.Client.UnityWorld
                 LoadTable(AssetID.LevelUpRewardSkill, row => new LevelUpRewardSkill {
                     SkillID = row["skillID"]
                 }, gameDataStore.AddLevelUpRewardSkill),
-                LoadTable(AssetID.UnitAttribute, row => new Core.GameData.UnitAttribute {
-                    UnitID = row["unitID"],
-                    AttributeID = row["attributeID"],
-                    LevelAttributeID = row["levelAttributeID"]
-                }, gameDataStore.AddUnitAttribute),
                 LoadTable(AssetID.LevelAttribute, row => new Core.GameData.LevelAttribute {
                     ID = row["id"],
                     Level = int.Parse(row["level"]),
                     AttributeID = row["attributeID"],
                     Value = CreateAttribute(row["value"])
                 }, gameDataStore.AddLevelAttribute),
-                LoadTable(AssetID.Attribute, row => new Core.GameData.Attribute {
+                LoadTable(AssetID.BaseAttribute, row => new Core.GameData.BaseAttribute {
                     ID = row["id"],
                     AttributeID = row["attributeID"],
                     Value = CreateAttribute(row["value"])
-                }, gameDataStore.AddAttribute),
+                }, gameDataStore.AddBaseAttribute),
                 LoadTable(AssetID.AttributeSet, row => new Core.GameData.AttributeSet {
                     ID = row["id"],
                     AttributeID = row["attributeID"]

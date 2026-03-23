@@ -182,21 +182,14 @@ namespace TaskForce.AP.Client.Core
 
         public int GetSoulExp(int level)
         {
-            var factors = _coefficientsByFormulaID[CoefficientID.SoulExp].ToList();
-            if (factors.Count == 0) return 0;
-
-            float a = factors[0].Value;
-            return (int)Math.Floor(a * level);
+            var exp = _soulExps.Where(entry => entry.Level <= level).OrderByDescending(Entry => Entry.Level).FirstOrDefault();
+            return exp.Exp;
         }
 
         public int GetRequireExp(int level)
         {
-            var factors = _coefficients.Where(entry => entry.FormulaID == CoefficientID.RequireExp);
-            var a = factors.ElementAt(0).Value;
-            var b = factors.ElementAt(1).Value;
-            var c = factors.ElementAt(2).Value;
-
-            return (int)Math.Floor(a * Math.Pow(level, 2) + b * level + c);
+            var exp = _requireExps.Where(entry => entry.Level <= level).OrderByDescending(Entry => Entry.Level).FirstOrDefault();
+            return exp.Exp;
         }
 
         public IEnumerable<ModifyAttributeSkill> GetModifyAttributeSkillEffects(string skillID)

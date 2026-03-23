@@ -9,7 +9,6 @@ namespace TaskForce.AP.Client.Core
     public class GameDataStore
     {
         private readonly List<SkillBaseAttribute> _skillBaseAttributes;
-        private readonly List<Coefficient> _coefficients;
         private readonly List<StageEnemyUnit> _stageEnemyUnits;
         private readonly List<Stage> _stages;
         private readonly List<Unit> _units;
@@ -31,13 +30,11 @@ namespace TaskForce.AP.Client.Core
 
         private Dictionary<string, Formula> _formulasByID;
         private Dictionary<string, Skill> _skillsByID;
-        private Dictionary<string, Dictionary<string, float>> _coefficientsByFormulaID;
         private Dictionary<string, IEnumerable<ModifyAttributeSkill>> _modifyAttributeSkillsBySkillID;
 
         public GameDataStore()
         {
             _skillBaseAttributes = new List<SkillBaseAttribute>();
-            _coefficients = new List<Coefficient>();
             _modifyAttributeEffects = new List<ModifyAttributeEffect>();
             _stageEnemyUnits = new List<StageEnemyUnit>();
             _stages = new List<Stage>();
@@ -62,9 +59,6 @@ namespace TaskForce.AP.Client.Core
         {
             _formulasByID = _formulas.ToDictionary(entry => entry.ID);
             _skillsByID = _skills.ToDictionary(entry => entry.ID);
-            _coefficientsByFormulaID = _coefficients.GroupBy(entry => entry.FormulaID).ToDictionary(
-                group => group.Key,
-                group => group.ToDictionary(entry => entry.Key, entry => entry.Value));
             _modifyAttributeSkillsBySkillID = _modifyAttributeSkills.GroupBy(entry => entry.SkillID).ToDictionary(
                 group => group.Key,
                 group => group.AsEnumerable());
@@ -145,11 +139,6 @@ namespace TaskForce.AP.Client.Core
             _skillBaseAttributes.Add(entry);
         }
 
-        public void AddCoefficient(Coefficient entry)
-        {
-            _coefficients.Add(entry);
-        }
-
         public void AddModifyAttributeEffect(ModifyAttributeEffect entry)
         {
             _modifyAttributeEffects.Add(entry);
@@ -163,11 +152,6 @@ namespace TaskForce.AP.Client.Core
         public float GetSoulDropRate()
         {
             return _soulDropRate;
-        }
-
-        public IReadOnlyDictionary<string, float> GetCoefficientByFormulaID(string id)
-        {
-            return _coefficientsByFormulaID[id];
         }
 
         public Formula GetFormulaByID(string id)
@@ -213,11 +197,6 @@ namespace TaskForce.AP.Client.Core
                 return Enumerable.Empty<LevelAttribute>();
 
             return _levelAttributes.Where(entry => entry.ID == attr.LevelAttributeID);
-        }
-
-        public IEnumerable<Coefficient> GetCoefficients()
-        {
-            return _coefficients;
         }
 
         public IEnumerable<ModifyAttributeEffect> GetModifyAttributeEffects()

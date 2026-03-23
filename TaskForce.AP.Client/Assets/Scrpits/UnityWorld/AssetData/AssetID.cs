@@ -4,7 +4,6 @@
     {
         public const string Constants = "CONSTANTS";
         public const string Text = "TEXT";
-        public const string Coefficient = "COEFFICIENT";
         public const string SkillBaseAttribute = "SKILL_BASE_ATTRIBUTE";
         public const string SkillLevelAttribute = "SKILL_LEVEL_ATTRIBUTE";
 

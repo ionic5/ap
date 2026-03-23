@@ -22,11 +22,6 @@ namespace TaskForce.AP.Client.UnityWorld
             var loadTasks = new List<Task>
             {
                 LoadConstants(gameDataStore),
-                LoadTable(AssetID.Coefficient, row => new Coefficient {
-                    FormulaID = row["formulaID"],
-                    Key = row["key"],
-                    Value = float.Parse(row["value"])
-                }, gameDataStore.AddCoefficient),
                 LoadTable(AssetID.SkillBaseAttribute, row => new SkillBaseAttribute {
                     SkillID = row["skillID"],
                     BaseAttributeID = row["baseAttributeID"]

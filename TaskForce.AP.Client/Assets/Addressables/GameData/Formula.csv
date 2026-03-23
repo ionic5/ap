@@ -1,8 +1,0 @@
-"id","calculationType",,,
-"REQUIRE_EXP","REQUIRE_EXP",,"REQUIRE_EXP","a*level^2+b*level+c"
-"SOUL_EXP","SOUL_EXP",,"SOUL_EXP","k*level"
-"STAT_0","STAT_0",,"STAT_0","base_stat + (level-1) *a"
-"STAT_1","STAT_0",,,
-"STAT_2","STAT_0",,"FORMULA_0","a"
-"FORMULA_0","FORMULA_0",,"FORMULA_1","a + b * x"
-"SWING_ANGLE_A","FORMULA_0",,"FORMULA_2","a + x"

@@ -14,7 +14,6 @@ namespace TaskForce.AP.Client.Core
         private readonly List<Unit> _units;
         private readonly List<NonPlayerUnitLogic> _nonPlayerUnitLogics;
         private readonly List<ModifyAttributeEffect> _modifyAttributeEffects;
-        private readonly List<Formula> _formulas;
         private readonly List<UnitDefaultSkill> _unitDefaultSkills;
         private readonly List<Skill> _skills;
         private readonly List<LevelUpRewardSkill> _levelUpRewardSkills;
@@ -28,7 +27,6 @@ namespace TaskForce.AP.Client.Core
         private readonly List<SoulExp> _soulExps;
         private float _soulDropRate;
 
-        private Dictionary<string, Formula> _formulasByID;
         private Dictionary<string, Skill> _skillsByID;
         private Dictionary<string, IEnumerable<ModifyAttributeSkill>> _modifyAttributeSkillsBySkillID;
 
@@ -40,7 +38,6 @@ namespace TaskForce.AP.Client.Core
             _stages = new List<Stage>();
             _units = new List<Unit>();
             _nonPlayerUnitLogics = new List<NonPlayerUnitLogic>();
-            _formulas = new List<Formula>();
             _unitDefaultSkills = new List<UnitDefaultSkill>();
             _skills = new List<Skill>();
             _levelUpRewardSkills = new List<LevelUpRewardSkill>();
@@ -57,7 +54,6 @@ namespace TaskForce.AP.Client.Core
 
         public void Bake()
         {
-            _formulasByID = _formulas.ToDictionary(entry => entry.ID);
             _skillsByID = _skills.ToDictionary(entry => entry.ID);
             _modifyAttributeSkillsBySkillID = _modifyAttributeSkills.GroupBy(entry => entry.SkillID).ToDictionary(
                 group => group.Key,
@@ -104,11 +100,6 @@ namespace TaskForce.AP.Client.Core
             _unitDefaultSkills.Add(entry);
         }
 
-        public void AddFormula(Formula entry)
-        {
-            _formulas.Add(entry);
-        }
-
         public void AddNonPlayerUnitLogic(NonPlayerUnitLogic entry)
         {
             _nonPlayerUnitLogics.Add(entry);
@@ -152,11 +143,6 @@ namespace TaskForce.AP.Client.Core
         public float GetSoulDropRate()
         {
             return _soulDropRate;
-        }
-
-        public Formula GetFormulaByID(string id)
-        {
-            return _formulasByID.GetValueOrDefault(id);
         }
 
         public Skill GetSkillById(string id)
@@ -222,11 +208,6 @@ namespace TaskForce.AP.Client.Core
         public IEnumerable<NonPlayerUnitLogic> GetNonPlayerUnitLogics()
         {
             return _nonPlayerUnitLogics;
-        }
-
-        public IEnumerable<Formula> GetFormulas()
-        {
-            return _formulas;
         }
 
         public IEnumerable<Skill> GetSkills()
